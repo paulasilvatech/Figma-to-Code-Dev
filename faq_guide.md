@@ -403,22 +403,6 @@ Skills remain valuable as AI tools evolve.
 
 ---
 
-## ❓ Still Have Questions?
-
-### Can't find your answer?
-1. **Search our docs**: [docs.design-to-code.dev](https://docs.design-to-code.dev)
-2. **Check GitHub issues**: Maybe someone asked already
-3. **Join Discord**: Ask the community
-4. **Email us**: workshop-support@design-to-code.dev
-
-### Help improve this FAQ
-- **Suggest questions** we should add
-- **Improve existing answers**
-- **Submit corrections**
-- **Share your experience**
-
----
-
 **🚀 Ready to start? Choose your scenario and let's build something amazing!**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) | [💬 Join Discord](https://discord.gg/design-to-code)
+[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) 
