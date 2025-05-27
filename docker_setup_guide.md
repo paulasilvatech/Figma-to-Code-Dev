@@ -571,6 +571,11 @@ docker system df
 
 ---
 
+*Last Updated: May 2025*  
+*Testing Guide Version: 2.0*
+
+---
+
 **🐳 Happy containerizing! Docker makes the workshop setup incredibly smooth and consistent.**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) | [❓ FAQ](FAQ.md)
+[🏠 Main README](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) | [❓ FAQ](faq_guide.md)
