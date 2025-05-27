@@ -2252,14 +2252,16 @@ esac
 
 **Congratulations!** Your projects are now deployed across multiple cloud providers with automatic failover and global load balancing.
 
-**[→ Continue to Contributing Guide](contributing_guide.md)**
+### Recommended Next Steps:
+1. **[→ Set up Observability](observability_guide.md)** - Monitor your multi-cloud deployments with Datadog & Azure Monitor
+2. **[→ Continue to Contributing Guide](contributing_guide.md)** - Learn how to contribute to the project
 
 ---
 
 ## 🗺️ Workshop Navigation
 
 - **← Previous**: [Demo 4: Travel Platform](../demos/standardized/demo-4-travelwise-standardized.md)
-- **→ Next**: [Contributing Guide](contributing_guide.md)
+- **→ Next**: [Observability Guide](observability_guide.md) | [Contributing Guide](contributing_guide.md)
 - **Resources**: [Docker Setup](docker_setup_guide.md) | [Testing Guide](testing_guide.md)
 - **Help**: [FAQ](faq_guide.md) | [Troubleshooting](workshop_setup_guide.md#troubleshooting)
 

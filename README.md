@@ -397,6 +397,7 @@ Special thanks to all contributors, beta testers, and the amazing developer comm
 - [📋 Demo Setup Guide](guides/demo-setup-guide.md)
 - [🧪 Testing Guide](guides/testing_guide.md)
 - [🚀 Deployment Guide](guides/deployment_guide.md)
+- [🔍 Observability Guide](guides/observability_guide.md)
 - [🐳 Docker Setup Guide](guides/docker_setup_guide.md)
 - [❓ FAQ Guide](guides/faq_guide.md)
 - [🤝 Contributing Guide](guides/contributing_guide.md)
