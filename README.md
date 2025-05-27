@@ -1,4 +1,4 @@
-# 🚀 Design-to-Code Workshop
+# 🚀 Figma-to-Code Workshop
 ## Transform Figma Designs into Production-Ready Code with AI
 
 > **Transform weeks of development into hours using GitHub Copilot Agent Mode**
@@ -332,37 +332,6 @@ We welcome contributions to improve the workshop experience!
 
 ---
 
-## 🏆 Success Stories
-
-> *"GitHub Copilot Agent Mode reduced our travel platform development from 2 months to 1 week. The generated code quality exceeded our senior developers' expectations."*
-> 
-> **— CTO, TravelTech Startup**
-
-> *"We saw a 250% increase in client inquiries after launching the AI-generated portfolio. The interactive elements really showcase our capabilities."*
-> 
-> **— CEO, Creative Studio**
-
-> *"The AI understood complex animation requirements and generated performant code that passed all our benchmarks. It's like having a senior architect on the team."*
-> 
-> **— Lead Developer, Digital Agency**
-
----
-
-## 📞 Support & Community
-
-### Getting Help
-- 💬 **Discord Community**: [Join our server](https://discord.gg/design-to-code)
-- 📧 **Email Support**: workshop@design-to-code.dev
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/design-to-code-workshop/issues)
-- 📖 **Documentation**: [Full Guide](https://docs.design-to-code.dev)
-
-### Stay Updated
-- 🐦 **Twitter**: [@DesignToCodeAI](https://twitter.com/DesignToCodeAI)
-- 📰 **Newsletter**: [Subscribe for updates](https://design-to-code.dev/newsletter)
-- 📺 **YouTube**: [Video tutorials](https://youtube.com/c/DesignToCode)
-
----
-
 ## 📄 License & Credits
 
 ### License
@@ -394,4 +363,4 @@ Special thanks to all contributors, beta testers, and the amazing developer comm
 
 ---
 
-[🏠 Home](README.md) | [📚 Scenarios](/scenarios) | [🛠️ Setup Guide](/setup)
+[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
