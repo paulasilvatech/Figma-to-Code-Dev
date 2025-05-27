@@ -997,20 +997,10 @@ GATSBY_MAPBOX_TOKEN=your_mapbox_token
 
 ---
 
-## 🏆 Success Stories
-
-> "GitHub Copilot Agent Mode transformed our portfolio site development. What would have taken our team 2 weeks was completed in 2 days with stunning animations." - *Creative Director, Digital Agency*
-
-> "The AI understood complex animation requirements and generated performant code that passed all our benchmarks. It's like having a senior animation developer on the team." - *Lead Developer, Nexus Creative*
-
-> "We saw a 250% increase in client inquiries after launching the AI-generated portfolio. The interactive elements and smooth animations really showcase our capabilities." - *CEO, Creative Studio*
-
----
-
-*Demo created for the Design-to-Code Workshop - Enterprise Portfolio Series*
+*Demo created for the Figma-to-Code Workshop - Enterprise Portfolio Series*
 
 **Workshop Version**: 2.0  
-**Last Updated**: January 2025  
+**Last Updated**: May 2025    
 **Next Demo**: [Travel Platform Demo](./demo-4-travel-platform.md)
 
 ---
