@@ -403,6 +403,11 @@ Skills remain valuable as AI tools evolve.
 
 ---
 
-**🚀 Ready to start? Choose your scenario and let's build something amazing!**
+*Last Updated: May 2025*  
+*Testing Guide Version: 2.0*
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) 
+---
+
+**✨ You're all set! Time to experience the future of development with AI.**
+
+[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
