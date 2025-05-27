@@ -670,3 +670,14 @@ jobs:
 
 *Last Updated: May 2025*  
 *Testing Guide Version: 2.0*
+
+---
+
+**Made with ❤️ and 🤖 by the Design-to-Code Team**
+
+*Empowering developers to build faster, better, and more creatively with AI*
+
+---
+
+[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
+
