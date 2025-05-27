@@ -515,6 +515,11 @@ Every contribution, no matter how small, helps make AI-powered development more 
 
 ---
 
+*Last Updated: May 2025*  
+*Testing Guide Version: 2.0*
+
+---
+
 **Ready to contribute? Pick an issue, fork the repo, and let's build something amazing together!**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) |
+[🏠 Main README](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
