@@ -385,12 +385,6 @@ Special thanks to all contributors, beta testers, and the amazing developer comm
 1. **Choose your scenario** from the 4 available demos
 2. **Follow the setup guide** in each scenario's README
 3. **Experience the power** of AI-assisted development
-4. **Share your results** with the community
-
-### Want to Learn More?
-- 📅 **Book a Workshop Session**: [Schedule here](https://design-to-code.dev/book)
-- 🎓 **Advanced Training**: Enterprise workshops available
-- 🔧 **Custom Implementation**: Tailored solutions for your team
 
 ---
 
@@ -400,4 +394,4 @@ Special thanks to all contributors, beta testers, and the amazing developer comm
 
 ---
 
-[🏠 Home](README.md) | [📚 Scenarios](/scenarios) | [🛠️ Setup Guide](/setup) | [💬 Community](https://discord.gg/design-to-code)
+[🏠 Home](README.md) | [📚 Scenarios](/scenarios) | [🛠️ Setup Guide](/setup)
