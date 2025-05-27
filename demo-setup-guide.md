@@ -259,7 +259,3 @@ const DemoMetrics = () => {
 ```
 
 ---
-
-## 🎯 Key Talking Points
-
-###
