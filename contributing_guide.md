@@ -472,18 +472,6 @@ Brief description of changes and motivation.
 2. Read the [Documentation](https://docs.design-to-code.dev)
 3. Try the [Troubleshooting Guide](TROUBLESHOOTING.md)
 
-### Where to Get Help
-- 💬 **Discord**: [Join our community](https://discord.gg/design-to-code)
-- 📧 **Email**: contributors@design-to-code.dev
-- 🐛 **GitHub Issues**: For bugs and feature requests
-- 📖 **Discussions**: For general questions
-
-### Response Times
-- **Issues**: Within 48 hours
-- **Pull Requests**: Within 1 week
-- **Discord**: Usually within hours
-- **Email**: Within 3 business days
-
 ---
 
 ## 📄 Code of Conduct
@@ -529,4 +517,4 @@ Every contribution, no matter how small, helps make AI-powered development more 
 
 **Ready to contribute? Pick an issue, fork the repo, and let's build something amazing together!**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) | [💬 Join Discord](https://discord.gg/design-to-code)
+[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) |
