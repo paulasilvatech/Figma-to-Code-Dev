@@ -369,10 +369,6 @@ npm install
    - Follow the step-by-step instructions
    - Use the provided Copilot prompts
 
-3. **Join the Community**
-   - [Discord Server](https://discord.gg/design-to-code)
-   - [GitHub Discussions](https://github.com/design-to-code-workshop/discussions)
-
 ---
 
 ## 🆘 Getting Help
@@ -388,6 +384,11 @@ npm install
 
 ---
 
+*Last Updated: May 2025*  
+*Testing Guide Version: 2.0*
+
+---
+
 **✨ You're all set! Time to experience the future of development with AI.**
 
-[🏠 Main README](README.md) | [📚 Workshop Scenarios](/scenarios) 
+[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
