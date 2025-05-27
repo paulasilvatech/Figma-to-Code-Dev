@@ -389,6 +389,21 @@ npm install
 
 ---
 
-**✨ You're all set! Time to experience the future of development with AI.**
+## 🎯 What's Next?
 
-[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
+**Setup complete!** Now let's start building amazing projects:
+
+**[→ Continue to Demo Setup Guide](demo-setup-guide.md)**
+
+---
+
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Main README](../README.md)
+- **→ Next**: [Demo Setup Guide](demo-setup-guide.md)
+- **Alternative**: [Docker Setup](docker_setup_guide.md) (optional)
+- **Help**: [FAQ](faq_guide.md) | [Troubleshooting](#troubleshooting)
+
+---
+
+**✨ You're all set! Time to experience the future of development with AI.**

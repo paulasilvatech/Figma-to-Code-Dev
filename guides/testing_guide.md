@@ -679,5 +679,13 @@ jobs:
 
 ---
 
-[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
+## 🗺️ Navigation
+
+- **Related Guides**: [Docker Setup](docker_setup_guide.md) | [Deployment Guide](deployment_guide.md)
+- **Back to Demos**: [Demo 1](../demos/standardized/demo-1-ecommerce-standardized.md) | [Demo 2](../demos/standardized/demo-2-saas-standardized.md) | [Demo 3](../demos/standardized/demo-3-agency-portfolio-standardized.md) | [Demo 4](../demos/standardized/demo-4-travelwise-standardized.md)
+- **Help**: [FAQ](faq_guide.md) | [Contributing](contributing_guide.md)
+
+---
+
+[🏠 Home](../README.md) | [📚 All Guides](./)
 

@@ -213,7 +213,7 @@ vercel --prod
 ```
 
 ### Q: Can I contribute new scenarios?
-**A:** We'd love that! See our [Contributing Guide](CONTRIBUTING.md):
+**A:** We'd love that! See our [Contributing Guide](contributing_guide.md):
 1. **Fork the repository**
 2. **Create your scenario**
 3. **Follow our templates**
@@ -408,6 +408,15 @@ Skills remain valuable as AI tools evolve.
 
 ---
 
+## 🗺️ Quick Navigation
+
+- **Getting Started**: [Setup Guide](workshop_setup_guide.md) → [Demo Setup](demo-setup-guide.md)
+- **Demos**: [E-commerce](../demos/standardized/demo-1-ecommerce-standardized.md) | [SaaS](../demos/standardized/demo-2-saas-standardized.md) | [Agency](../demos/standardized/demo-3-agency-portfolio-standardized.md) | [Travel](../demos/standardized/demo-4-travelwise-standardized.md)
+- **Advanced**: [Deployment](deployment_guide.md) | [Contributing](contributing_guide.md)
+- **Resources**: [Copilot Prompts](copilot_prompts_library.md) | [Testing](testing_guide.md)
+
+---
+
 **✨ You're all set! Time to experience the future of development with AI.**
 
-[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md)
+[🏠 Home](../README.md) | [📚 All Guides](./)

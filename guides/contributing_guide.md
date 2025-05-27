@@ -470,7 +470,7 @@ Brief description of changes and motivation.
 ### Before Asking Questions
 1. Check existing [GitHub Issues](https://github.com/design-to-code-workshop/issues)
 2. Read the [Documentation](https://docs.design-to-code.dev)
-3. Try the [Troubleshooting Guide](TROUBLESHOOTING.md)
+3. Try the [Troubleshooting Guide](../docs/TROUBLESHOOTING.md)
 
 ---
 
@@ -520,6 +520,26 @@ Every contribution, no matter how small, helps make AI-powered development more 
 
 ---
 
+## 🎯 Workshop Complete!
+
+**You've completed the entire workshop journey!** From setup to deployment to contributing back.
+
+### Continue Your Learning:
+- **[Start Over with New Ideas](../demos/standardized/demo-1-ecommerce-standardized.md)**
+- **[Explore Advanced Prompts](copilot_prompts_library.md)**
+- **[Join Our Community](#community--support)**
+
+---
+
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Deployment Guide](deployment_guide.md)
+- **Start Over**: [Back to Setup](workshop_setup_guide.md)
+- **Resources**: [All Demos](../demos/) | [All Guides](./)
+- **Help**: [FAQ](faq_guide.md) | [Community](#community--support)
+
+---
+
 **Ready to contribute? Pick an issue, fork the repo, and let's build something amazing together!**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
+[🏠 Main README](../README.md) | [🎊 You Did It!](#)

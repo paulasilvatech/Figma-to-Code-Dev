@@ -1,5 +1,11 @@
 # 🚀 Deployment Guide
 
+## 📍 You Are Here
+
+You've completed all demos! Now let's deploy your projects to production.
+
+**Workshop Progress**: Setup ✓ → Demos ✓ → **Deployment** → Contributing
+
 ## Overview
 
 Complete deployment guide for all workshop scenarios covering development, staging, and production environments with modern DevOps best practices.
@@ -838,5 +844,24 @@ npm run db:rollback -- --steps=1
 
 ---
 
+## 🎯 What's Next?
+
+**Great job!** Your projects are now live. Want to give back to the community?
+
+**[→ Continue to Contributing Guide](contributing_guide.md)**
+
+---
+
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Demo 4: Travel Platform](../demos/standardized/demo-4-travelwise-standardized.md)
+- **→ Next**: [Contributing Guide](contributing_guide.md)
+- **Resources**: [Docker Setup](docker_setup_guide.md) | [Testing Guide](testing_guide.md)
+- **Help**: [FAQ](faq_guide.md) | [Troubleshooting](workshop_setup_guide.md#troubleshooting)
+
+---
+
 *Last Updated: January 2025*  
 *Deployment Guide Version: 2.0*
+
+[🏠 Back to Main](../README.md) | [📚 All Guides](./) | [🎉 Celebrate Your Success](#)

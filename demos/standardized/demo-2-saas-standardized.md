@@ -1044,12 +1044,26 @@ NEXT_PUBLIC_STRIPE_KEY=pk_live_xxxxx
 
 ---
 
-*Demo created for the Figma-to-Code Workshop - Enterprise Dashboard Series*
+## 🎯 What's Next?
 
-**Workshop Version**: 2.0  
-**Last Updated**: May 2025  
-**Next Demo**: [Agency Portfolio Demo](./demo-3-agency-portfolio.md)
+**Excellent work!** You've mastered real-time dashboards. Ready for creative animations?
+
+**[→ Continue to Demo 3: Agency Portfolio](./demo-3-agency-portfolio-standardized.md)**
 
 ---
 
-[← Back to Workshop Home](../README.md) | [View All Demos](../demos/) | [Start Your Project →](#)
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Demo 1: E-commerce](./demo-1-ecommerce-standardized.md)
+- **→ Next**: [Demo 3: Agency Portfolio](./demo-3-agency-portfolio-standardized.md)
+- **Resources**: [Docker Setup](../../guides/docker_setup_guide.md) | [Testing Guide](../../guides/testing_guide.md)
+- **Help**: [FAQ](../../guides/faq_guide.md) | [Copilot Prompts](../../guides/copilot_prompts_library.md)
+
+---
+
+*Demo created for the Figma-to-Code Workshop - Enterprise Dashboard Series*
+
+**Workshop Version**: 2.0  
+**Last Updated**: May 2025
+
+[🏠 Back to Main](../../README.md) | [📚 All Demos](../)

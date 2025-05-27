@@ -682,6 +682,14 @@ Use React Testing Library with Jest. Include setup for mocking intersection obse
 
 ---
 
+## 🗺️ Navigation
+
+- **Use in Demos**: [Demo 1](../demos/standardized/demo-1-ecommerce-standardized.md) | [Demo 2](../demos/standardized/demo-2-saas-standardized.md) | [Demo 3](../demos/standardized/demo-3-agency-portfolio-standardized.md) | [Demo 4](../demos/standardized/demo-4-travelwise-standardized.md)
+- **Related**: [Testing Guide](testing_guide.md) | [Contributing Guide](contributing_guide.md)
+- **Help**: [FAQ](faq_guide.md) | [Setup Guide](workshop_setup_guide.md)
+
+---
+
 **🎯 Remember: Great prompts lead to great code. Be specific, provide context, and iterate!**
 
-[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
+[🏠 Home](../README.md) | [📚 All Guides](./)

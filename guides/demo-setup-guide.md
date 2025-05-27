@@ -229,6 +229,24 @@ cd demo-backups/scenario-x-complete
 # Use production builds for demo
 npm run build && npm run preview
 ```
+
 ---
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
+## 🎯 Ready to Build?
+
+**Choose your first demo and let's start coding!**
+
+**[→ Start with Demo 1: E-commerce](../demos/standardized/demo-1-ecommerce-standardized.md)**
+
+---
+
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Workshop Setup Guide](workshop_setup_guide.md)
+- **→ Next**: [Demo 1: E-commerce](../demos/standardized/demo-1-ecommerce-standardized.md)
+- **All Demos**: [E-commerce](../demos/standardized/demo-1-ecommerce-standardized.md) | [SaaS](../demos/standardized/demo-2-saas-standardized.md) | [Agency](../demos/standardized/demo-3-agency-portfolio-standardized.md) | [Travel](../demos/standardized/demo-4-travelwise-standardized.md)
+- **Resources**: [Copilot Prompts](copilot_prompts_library.md) | [Testing Guide](testing_guide.md)
+
+---
+
+[🏠 Main README](../README.md) | [❓ FAQ](faq_guide.md)

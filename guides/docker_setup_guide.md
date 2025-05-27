@@ -576,6 +576,15 @@ docker system df
 
 ---
 
+## 🗺️ Navigation
+
+- **Alternative Setup**: [Standard Setup](workshop_setup_guide.md) (without Docker)
+- **Continue to**: [Demo Setup Guide](demo-setup-guide.md)
+- **Related**: [Deployment Guide](deployment_guide.md) | [Testing Guide](testing_guide.md)
+- **Help**: [FAQ](faq_guide.md) | [Troubleshooting](#troubleshooting)
+
+---
+
 **🐳 Happy containerizing! Docker makes the workshop setup incredibly smooth and consistent.**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) | [❓ FAQ](faq_guide.md)
+[🏠 Main README](../README.md) | [📚 All Guides](./)

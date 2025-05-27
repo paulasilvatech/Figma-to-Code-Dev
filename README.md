@@ -125,19 +125,52 @@ OPENAI_API_KEY=your_openai_key
 ## 📁 Project Structure
 
 ```
-design-to-code-workshop/
-├── 📂 scenario-1-ecommerce/           # Nike product page
-│   ├── src/data/figmaExport.json      # Design tokens
-│   ├── src/components/                # Generated components
-│   └── README.md                      # Scenario guide
-├── 📂 scenario-2-saas/                # CloudSync dashboard  
-├── 📂 scenario-3-agency/              # Nexus Creative portfolio
-├── 📂 scenario-4-travel/              # TravelWise platform
-├── 📂 shared-resources/               # Common assets
-│   ├── figma-exports/                 # Design exports
-│   ├── design-tokens/                 # Shared styling
-│   └── component-library/             # Reusable components
-├── 📂 demo-scripts/                   # Workshop presentations
+figma-to-code-workshop/
+├── 📂 assets/                         # All project assets
+│   ├── exports/                       # Figma export files
+│   │   ├── figma-export-agency.json
+│   │   ├── figma-export-ecommerce.json
+│   │   ├── figma-export-saas.json
+│   │   └── figma-export-travelwise.json
+│   ├── images/                        # Thumbnail images
+│   │   ├── thumb_agency.png
+│   │   ├── thumb_elearning.png
+│   │   ├── thumb_startup.png
+│   │   └── thumb_travel.png
+│   ├── mocks/                         # Mock data files
+│   │   ├── agency_mock.json
+│   │   ├── ecommerce_mock.json
+│   │   ├── saas_mock.json
+│   │   └── travel_mock.json
+│   └── templates/                     # HTML templates
+│       ├── figma-template-ecommerce.html
+│       ├── figma-template-portfolio-agency.html
+│       ├── figma-template-saas-landing.html
+│       └── figma-template-travelwise.html
+├── 📂 config/                         # Configuration files
+│   ├── docker_compose_setup.txt
+│   ├── env_example_file.sh
+│   └── package_json_scripts.json
+├── 📂 demos/                          # Demo scenarios
+│   └── standardized/                  # Standardized demos
+│       ├── demo-1-ecommerce-standardized.md
+│       ├── demo-2-saas-standardized.md
+│       ├── demo-3-agency-portfolio-standardized.md
+│       └── demo-4-travelwise-standardized.md
+├── 📂 docs/                           # Documentation (empty for now)
+├── 📂 guides/                         # All guide documents
+│   ├── contributing_guide.md
+│   ├── copilot_prompts_library.md
+│   ├── demo-setup-guide.md
+│   ├── demo-standardization-guide.md
+│   ├── deployment_guide.md
+│   ├── docker_setup_guide.md
+│   ├── faq_guide.md
+│   ├── testing_guide.md
+│   └── workshop_setup_guide.md
+├── 📂 scripts/                        # Utility scripts
+│   └── setup_script.js
+├── 📄 LICENSE                         # MIT License
 └── 📄 README.md                       # This file
 ```
 
@@ -335,7 +368,7 @@ We welcome contributions to improve the workshop experience!
 ## 📄 License & Credits
 
 ### License
-MIT License - see [LICENSE.md](LICENSE.md) for details
+MIT License - see [LICENSE](LICENSE) for details
 
 ### Credits
 - **Workshop Created By**: Design-to-Code Team
@@ -357,10 +390,42 @@ Special thanks to all contributors, beta testers, and the amazing developer comm
 
 ---
 
-**Made with ❤️ and 🤖 by the Design-to-Code Team**
+## 📖 Quick Links
 
-*Empowering developers to build faster, better, and more creatively with AI*
+### Guides
+- [🛠️ Workshop Setup Guide](guides/workshop_setup_guide.md)
+- [📋 Demo Setup Guide](guides/demo-setup-guide.md)
+- [🧪 Testing Guide](guides/testing_guide.md)
+- [🚀 Deployment Guide](guides/deployment_guide.md)
+- [🐳 Docker Setup Guide](guides/docker_setup_guide.md)
+- [❓ FAQ Guide](guides/faq_guide.md)
+- [🤝 Contributing Guide](guides/contributing_guide.md)
+- [💡 Copilot Prompts Library](guides/copilot_prompts_library.md)
+
+### Demo Scenarios
+- [🛍️ E-commerce Demo](demos/standardized/demo-1-ecommerce-standardized.md)
+- [📊 SaaS Dashboard Demo](demos/standardized/demo-2-saas-standardized.md)
+- [🎨 Agency Portfolio Demo](demos/standardized/demo-3-agency-portfolio-standardized.md)
+- [✈️ Travel Platform Demo](demos/standardized/demo-4-travelwise-standardized.md)
 
 ---
 
-[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
+## 🚀 Start Your Journey
+
+Ready to transform your development workflow? Follow our guided path:
+
+**[→ Begin with Workshop Setup](guides/workshop_setup_guide.md)** 
+
+---
+
+## 🗺️ Workshop Navigation
+
+- **Next Step**: [Workshop Setup Guide](guides/workshop_setup_guide.md) →
+- **Quick Links**: [FAQ](guides/faq_guide.md) | [Docker Setup](guides/docker_setup_guide.md) | [Contributing](guides/contributing_guide.md)
+- **Jump to Demos**: [Demo 1](demos/standardized/demo-1-ecommerce-standardized.md) | [Demo 2](demos/standardized/demo-2-saas-standardized.md) | [Demo 3](demos/standardized/demo-3-agency-portfolio-standardized.md) | [Demo 4](demos/standardized/demo-4-travelwise-standardized.md)
+
+---
+
+**Made with ❤️ and 🤖 by the Design-to-Code Team**
+
+*Empowering developers to build faster, better, and more creatively with AI*

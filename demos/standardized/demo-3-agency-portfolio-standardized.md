@@ -997,12 +997,26 @@ GATSBY_MAPBOX_TOKEN=your_mapbox_token
 
 ---
 
-*Demo created for the Figma-to-Code Workshop - Enterprise Portfolio Series*
+## 🎯 What's Next?
 
-**Workshop Version**: 2.0  
-**Last Updated**: May 2025    
-**Next Demo**: [Travel Platform Demo](./demo-4-travel-platform.md)
+**Amazing portfolio!** You've mastered advanced animations. Ready for the final challenge?
+
+**[→ Continue to Demo 4: Travel Platform](./demo-4-travelwise-standardized.md)**
 
 ---
 
-[← Back to Workshop Home](../README.md) | [View All Demos](../demos/) | [Start Your Project →](#)
+## 🗺️ Workshop Navigation
+
+- **← Previous**: [Demo 2: SaaS Dashboard](./demo-2-saas-standardized.md)
+- **→ Next**: [Demo 4: Travel Platform](./demo-4-travelwise-standardized.md)
+- **Resources**: [Testing Guide](../../guides/testing_guide.md) | [Deployment Guide](../../guides/deployment_guide.md)
+- **Help**: [FAQ](../../guides/faq_guide.md) | [Copilot Prompts](../../guides/copilot_prompts_library.md)
+
+---
+
+*Demo created for the Figma-to-Code Workshop - Enterprise Portfolio Series*
+
+**Workshop Version**: 2.0  
+**Last Updated**: May 2025
+
+[🏠 Back to Main](../../README.md) | [📚 All Demos](../)
