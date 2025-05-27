@@ -571,31 +571,6 @@ docker system df
 
 ---
 
-## 🆘 Getting Help
-
-### Support Resources
-- 💬 **Discord**: [Workshop Community](https://discord.gg/design-to-code)
-- 📧 **Email**: docker-support@design-to-code.dev
-- 🐛 **GitHub Issues**: [Report Problems](https://github.com/design-to-code-workshop/issues)
-- 📖 **Docker Docs**: [Official Documentation](https://docs.docker.com)
-
-### When Asking for Help
-Include this information:
-```bash
-# System info
-docker --version
-docker-compose --version
-uname -a
-
-# Container status
-docker-compose ps
-
-# Recent logs
-docker-compose logs --tail=50
-```
-
----
-
 **🐳 Happy containerizing! Docker makes the workshop setup incredibly smooth and consistent.**
 
 [🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) | [❓ FAQ](FAQ.md)
