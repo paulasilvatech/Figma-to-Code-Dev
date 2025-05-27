@@ -378,10 +378,7 @@ npm install
 ## 🆘 Getting Help
 
 ### Support Channels
-- 💬 **Discord**: Fastest response for quick questions
-- 📧 **Email**: workshop-support@design-to-code.dev
 - 🐛 **GitHub Issues**: For bugs and feature requests
-- 📖 **Documentation**: [Full docs site](https://docs.design-to-code.dev)
 
 ### Before Asking for Help
 1. Check this setup guide thoroughly
@@ -393,4 +390,4 @@ npm install
 
 **✨ You're all set! Time to experience the future of development with AI.**
 
-[🏠 Main README](README.md) | [📚 Workshop Scenarios](/scenarios) | [💬 Get Help](https://discord.gg/design-to-code)
+[🏠 Main README](README.md) | [📚 Workshop Scenarios](/scenarios) 
