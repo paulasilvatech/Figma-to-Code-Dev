@@ -884,20 +884,10 @@ REACT_APP_SENTRY_DSN=https://xxxxx@sentry.io/xxxxx
 
 ---
 
-## 🏆 Success Stories
-
-> "GitHub Copilot Agent Mode reduced our Nike product page development from 3 weeks to 2 days. The AI understood complex e-commerce requirements and generated production-ready code that passed all our quality checks." - *Senior Frontend Developer, Nike Digital*
-
-> "The generated components were so well-structured that our junior developers could easily understand and extend them. It's like having a senior architect design every component." - *Tech Lead, E-commerce Platform*
-
-> "We saw a 40% increase in conversion rates after implementing the AI-generated product page. The attention to UX details and performance optimization was remarkable." - *Product Manager, Online Retail*
-
----
-
-*Demo created for the Design-to-Code Workshop - E-commerce Series*
+*Demo created for the Figma-to-Code Workshop - E-commerce Series*
 
 **Workshop Version**: 2.0  
-**Last Updated**: January 2025  
+**Last Updated**: May 2025  
 **Next Demo**: [SaaS Dashboard Demo](./demo-2-saas-dashboard.md)
 
 ---
