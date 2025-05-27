@@ -1210,6 +1210,746 @@ class MultiCloudCostOptimizer:
 
 ---
 
+## 🚀 GitHub Actions Deployment Workflows
+
+This section provides complete GitHub Actions workflows for deploying each demo scenario with full observability integration. Each workflow includes:
+
+- **Automated Testing** - Unit, integration, and smoke tests
+- **Performance Monitoring** - Lighthouse scores sent to Datadog
+- **Deployment Tracking** - Events and version tracking
+- **Health Checks** - Post-deployment verification
+- **Rollback Capability** - Automated rollback on failures
+
+### Workflow Overview
+
+| Workflow | Cloud Provider | Key Features |
+|----------|---------------|--------------|
+| **E-commerce** | Azure App Service | Product catalog, shopping cart, payment integration |
+| **SaaS Dashboard** | AWS ECS | Real-time analytics, WebSocket, multi-tenant |
+| **Agency Portfolio** | Google Cloud CDN | Static site, multi-region, RUM monitoring |
+| **Travel Platform** | Azure + SQL | Database migrations, autoscaling, i18n |
+
+### Complete E-commerce Deployment with Monitoring
+
+```yaml
+# .github/workflows/deploy-ecommerce.yml
+name: Deploy E-commerce with Observability
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/ecommerce/**'
+      - '.github/workflows/deploy-ecommerce.yml'
+  workflow_dispatch:
+
+env:
+  APP_NAME: figma-ecommerce
+  DD_SERVICE: ecommerce-frontend
+  DD_ENV: production
+
+jobs:
+  deploy-and-monitor:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: |
+          cd apps/ecommerce
+          npm ci
+      
+      - name: Run tests with coverage
+        run: |
+          cd apps/ecommerce
+          npm run test:coverage
+          
+      - name: Send test results to Datadog
+        uses: datadog/synthetics-ci-github-action@v0.12.1
+        with:
+          api_key: ${{ secrets.DD_API_KEY }}
+          app_key: ${{ secrets.DD_APP_KEY }}
+          test_search_query: 'tag:ecommerce'
+      
+      - name: Build application
+        run: |
+          cd apps/ecommerce
+          npm run build
+          
+      - name: Deploy to Azure
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.APP_NAME }}
+          package: apps/ecommerce/build
+          
+      - name: Create Datadog deployment event
+        run: |
+          curl -X POST "https://api.datadoghq.com/api/v1/events" \
+            -H "DD-API-KEY: ${{ secrets.DD_API_KEY }}" \
+            -H "DD-APPLICATION-KEY: ${{ secrets.DD_APP_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "E-commerce Deployment",
+              "text": "Deployed version ${{ github.sha }} to production",
+              "alert_type": "info",
+              "source_type_name": "GITHUB",
+              "tags": [
+                "service:${{ env.DD_SERVICE }}",
+                "env:${{ env.DD_ENV }}",
+                "version:${{ github.sha }}",
+                "team:ecommerce"
+              ]
+            }'
+      
+      - name: Run smoke tests
+        run: |
+          cd apps/ecommerce
+          npm run test:e2e:smoke
+          
+      - name: Update Datadog monitors
+        run: |
+          # Enable monitors after deployment
+          python scripts/update_monitors.py --service ${{ env.DD_SERVICE }} --enable
+```
+
+### SaaS Dashboard Deployment with Metrics
+
+```yaml
+# .github/workflows/deploy-saas-dashboard.yml
+name: Deploy SaaS Dashboard with Monitoring
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/saas-dashboard/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'apps/saas-dashboard/**'
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      
+      - name: Setup monitoring
+        run: |
+          # Install Datadog CI
+          npm install -g @datadog/datadog-ci
+          
+          # Configure Datadog
+          export DATADOG_API_KEY=${{ secrets.DD_API_KEY }}
+          export DATADOG_APP_KEY=${{ secrets.DD_APP_KEY }}
+      
+      - name: Build and test
+        run: |
+          cd apps/saas-dashboard
+          npm ci
+          npm run lint
+          npm run test:unit
+          npm run build
+          
+      - name: Upload source maps to Datadog
+        run: |
+          cd apps/saas-dashboard
+          datadog-ci sourcemaps upload ./build \
+            --service=saas-dashboard \
+            --release-version=${{ github.sha }} \
+            --minified-path-prefix=https://dashboard.figma-to-code.com/
+      
+      - name: Deploy to AWS ECS
+        run: |
+          # Build Docker image
+          docker build -t saas-dashboard:${{ github.sha }} .
+          
+          # Tag and push to ECR
+          docker tag saas-dashboard:${{ github.sha }} \
+            ${{ secrets.ECR_REGISTRY }}/saas-dashboard:${{ github.sha }}
+          docker push ${{ secrets.ECR_REGISTRY }}/saas-dashboard:${{ github.sha }}
+          
+          # Update ECS service
+          aws ecs update-service \
+            --cluster production \
+            --service saas-dashboard \
+            --force-new-deployment
+      
+      - name: Monitor deployment
+        uses: datadog/github-action@v1
+        with:
+          api-key: ${{ secrets.DD_API_KEY }}
+          service: saas-dashboard
+          version: ${{ github.sha }}
+          env: production
+          
+      - name: Run integration tests
+        run: |
+          cd apps/saas-dashboard
+          npm run test:integration -- --env=production
+          
+      - name: Performance testing
+        run: |
+          cd apps/saas-dashboard
+          npm run lighthouse:ci
+          
+          # Send performance metrics to Datadog
+          node scripts/send-perf-metrics.js
+```
+
+### Agency Portfolio Deployment with CDN
+
+```yaml
+# .github/workflows/deploy-agency-portfolio.yml
+name: Deploy Agency Portfolio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/agency-portfolio/**'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+
+jobs:
+  deploy-multi-region:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        region: [us-east-1, eu-west-1, ap-southeast-1]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Google Cloud
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+      
+      - name: Build static site
+        run: |
+          cd apps/agency-portfolio
+          npm ci
+          npm run build:static
+          
+      - name: Deploy to Cloud Storage
+        run: |
+          gsutil -m rsync -r -d \
+            apps/agency-portfolio/dist \
+            gs://portfolio-${{ matrix.region }}/
+            
+      - name: Update Cloud CDN
+        run: |
+          gcloud compute url-maps invalidate-cdn-cache \
+            portfolio-lb-${{ matrix.region }} \
+            --path="/*" \
+            --async
+            
+      - name: Configure Datadog RUM
+        run: |
+          # Update RUM application with new version
+          curl -X PUT "https://api.datadoghq.com/api/v2/rum/applications/${{ secrets.DD_RUM_APP_ID }}" \
+            -H "DD-API-KEY: ${{ secrets.DD_API_KEY }}" \
+            -H "DD-APPLICATION-KEY: ${{ secrets.DD_APP_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "data": {
+                "attributes": {
+                  "name": "Agency Portfolio",
+                  "type": "browser",
+                  "version": "${{ github.sha }}"
+                }
+              }
+            }'
+      
+      - name: Synthetic monitoring setup
+        run: |
+          # Create synthetic tests for each region
+          datadog-ci synthetics run-tests \
+            --apiKey ${{ secrets.DD_API_KEY }} \
+            --appKey ${{ secrets.DD_APP_KEY }} \
+            --config synthetics-${{ matrix.region }}.json
+```
+
+### Travel Platform Deployment with Database Migration
+
+```yaml
+# .github/workflows/deploy-travel-platform.yml
+name: Deploy Travel Platform
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/travel-platform/**'
+      - 'infrastructure/travel/**'
+
+env:
+  AZURE_WEBAPP_NAME: travel-platform
+  AZURE_RESOURCE_GROUP: travel-platform-rg
+  NODE_VERSION: '18'
+
+jobs:
+  database-migration:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Run database migrations
+        run: |
+          cd apps/travel-platform
+          npm ci
+          npm run db:migrate:production
+          
+      - name: Verify migration
+        run: |
+          npm run db:verify
+          
+      - name: Send migration event to Datadog
+        run: |
+          curl -X POST "https://api.datadoghq.com/api/v1/events" \
+            -H "DD-API-KEY: ${{ secrets.DD_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "Database Migration Completed",
+              "text": "Successfully migrated database for Travel Platform",
+              "alert_type": "success",
+              "tags": ["service:travel-platform", "type:migration"]
+            }'
+
+  deploy-application:
+    needs: database-migration
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: Install and build
+        run: |
+          cd apps/travel-platform
+          npm ci
+          npm run build:production
+          
+      - name: Install Datadog APM
+        run: |
+          cd apps/travel-platform
+          npm install --save dd-trace
+          
+          # Add Datadog initialization
+          echo "require('dd-trace').init({
+            service: 'travel-platform',
+            env: 'production',
+            version: '${{ github.sha }}',
+            logInjection: true,
+            runtimeMetrics: true,
+            profiling: true
+          });" > dd-init.js
+      
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: apps/travel-platform
+          
+      - name: Configure autoscaling
+        run: |
+          az monitor autoscale create \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --resource ${{ env.AZURE_WEBAPP_NAME }} \
+            --resource-type Microsoft.Web/serverFarms \
+            --name travel-autoscale \
+            --min-count 2 \
+            --max-count 10 \
+            --count 2
+            
+          az monitor autoscale rule create \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --autoscale-name travel-autoscale \
+            --condition "CpuPercentage > 70 avg 5m" \
+            --scale out 1
+            
+      - name: Setup alerts
+        run: |
+          # Create Datadog monitors
+          python scripts/create_monitors.py \
+            --service travel-platform \
+            --env production \
+            --thresholds-file monitors/travel-platform.yaml
+```
+
+### Monitoring Pipeline for All Services
+
+```yaml
+# .github/workflows/monitoring-pipeline.yml
+name: Unified Monitoring Pipeline
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+  workflow_dispatch:
+
+jobs:
+  collect-metrics:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: |
+          pip install datadog azure-monitor-query boto3 google-cloud-monitoring
+          
+      - name: Collect Azure metrics
+        run: |
+          python scripts/collect_azure_metrics.py \
+            --services ecommerce,travel-platform \
+            --metrics requests,errors,latency,cost
+            
+      - name: Collect AWS metrics
+        run: |
+          python scripts/collect_aws_metrics.py \
+            --services saas-dashboard \
+            --metrics cpu,memory,requests,errors
+            
+      - name: Collect GCP metrics
+        run: |
+          python scripts/collect_gcp_metrics.py \
+            --services agency-portfolio \
+            --metrics cdn_hits,latency,bandwidth
+            
+      - name: Calculate SLOs
+        run: |
+          python scripts/calculate_slos.py \
+            --config slo-config.yaml \
+            --output slo-report.json
+            
+      - name: Send to Datadog
+        run: |
+          python scripts/send_to_datadog.py \
+            --metrics-file collected-metrics.json \
+            --slo-file slo-report.json
+            
+      - name: Generate cost report
+        run: |
+          python scripts/generate_cost_report.py \
+            --clouds azure,aws,gcp \
+            --services all \
+            --period last_24h
+            
+      - name: Check anomalies
+        run: |
+          python scripts/detect_anomalies.py \
+            --sensitivity high \
+            --services all \
+            --alert-channel slack
+```
+
+### Rollback Workflow with Monitoring
+
+```yaml
+# .github/workflows/rollback-with-monitoring.yml
+name: Automated Rollback
+
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service to rollback'
+        required: true
+        type: choice
+        options:
+          - ecommerce
+          - saas-dashboard
+          - agency-portfolio
+          - travel-platform
+      version:
+        description: 'Version to rollback to'
+        required: true
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Validate rollback version
+        run: |
+          # Check if version exists
+          echo "Validating version ${{ inputs.version }} for ${{ inputs.service }}"
+          
+      - name: Create rollback event
+        run: |
+          curl -X POST "https://api.datadoghq.com/api/v1/events" \
+            -H "DD-API-KEY: ${{ secrets.DD_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "Rollback Initiated",
+              "text": "Rolling back ${{ inputs.service }} to version ${{ inputs.version }}",
+              "alert_type": "warning",
+              "tags": ["service:${{ inputs.service }}", "action:rollback"]
+            }'
+            
+      - name: Disable monitors
+        run: |
+          # Temporarily disable monitors during rollback
+          python scripts/manage_monitors.py \
+            --service ${{ inputs.service }} \
+            --action mute \
+            --duration 30
+            
+      - name: Execute rollback
+        run: |
+          case "${{ inputs.service }}" in
+            ecommerce)
+              az webapp deployment slot swap \
+                --name figma-ecommerce \
+                --resource-group ecommerce-rg \
+                --slot staging
+              ;;
+            saas-dashboard)
+              aws ecs update-service \
+                --cluster production \
+                --service saas-dashboard \
+                --task-definition saas-dashboard:${{ inputs.version }}
+              ;;
+            agency-portfolio)
+              gsutil -m rsync -r -d \
+                gs://portfolio-backup-${{ inputs.version }}/ \
+                gs://portfolio-production/
+              ;;
+            travel-platform)
+              az webapp deployment source config-zip \
+                --name travel-platform \
+                --resource-group travel-platform-rg \
+                --src releases/${{ inputs.version }}.zip
+              ;;
+          esac
+          
+      - name: Verify rollback
+        run: |
+          # Run smoke tests
+          npm run test:smoke:${{ inputs.service }}
+          
+      - name: Re-enable monitors
+        run: |
+          python scripts/manage_monitors.py \
+            --service ${{ inputs.service }} \
+            --action unmute
+            
+      - name: Update status
+        run: |
+          curl -X POST "https://api.datadoghq.com/api/v1/events" \
+            -H "DD-API-KEY: ${{ secrets.DD_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "Rollback Completed",
+              "text": "Successfully rolled back ${{ inputs.service }} to version ${{ inputs.version }}",
+              "alert_type": "success",
+              "tags": ["service:${{ inputs.service }}", "action:rollback", "status:success"]
+            }'
+```
+
+---
+
+## 📜 Monitoring Scripts
+
+### Update Monitors Script
+```python
+# scripts/update_monitors.py
+import argparse
+from datadog import initialize, api
+
+def update_monitors(service, enable=True):
+    """Enable or disable monitors for a service"""
+    initialize(api_key=os.environ['DD_API_KEY'], app_key=os.environ['DD_APP_KEY'])
+    
+    # Get all monitors for the service
+    monitors = api.Monitor.get_all(
+        group_states="all",
+        tags=[f"service:{service}"]
+    )
+    
+    for monitor in monitors:
+        if enable:
+            api.Monitor.unmute(monitor['id'])
+            print(f"Enabled monitor: {monitor['name']}")
+        else:
+            api.Monitor.mute(monitor['id'])
+            print(f"Disabled monitor: {monitor['name']}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--service", required=True)
+    parser.add_argument("--enable", action="store_true")
+    parser.add_argument("--disable", action="store_true")
+    args = parser.parse_args()
+    
+    update_monitors(args.service, args.enable)
+```
+
+### Performance Metrics Script
+```javascript
+// scripts/send-perf-metrics.js
+const { StatsD } = require('node-dogstatsd');
+const lighthouse = require('lighthouse');
+const chromeLauncher = require('chrome-launcher');
+
+const dogstatsd = new StatsD();
+
+async function runLighthouse(url) {
+  const chrome = await chromeLauncher.launch({chromeFlags: ['--headless']});
+  const options = {
+    logLevel: 'info',
+    output: 'json',
+    onlyCategories: ['performance'],
+    port: chrome.port
+  };
+  
+  const runnerResult = await lighthouse(url, options);
+  await chrome.kill();
+  
+  return runnerResult.lhr;
+}
+
+async function sendMetrics() {
+  const url = process.env.APP_URL || 'http://localhost:3000';
+  const results = await runLighthouse(url);
+  
+  // Send performance metrics to Datadog
+  dogstatsd.gauge('lighthouse.performance.score', results.categories.performance.score * 100);
+  dogstatsd.gauge('lighthouse.metrics.fcp', results.audits['first-contentful-paint'].numericValue);
+  dogstatsd.gauge('lighthouse.metrics.lcp', results.audits['largest-contentful-paint'].numericValue);
+  dogstatsd.gauge('lighthouse.metrics.tti', results.audits['interactive'].numericValue);
+  dogstatsd.gauge('lighthouse.metrics.cls', results.audits['cumulative-layout-shift'].numericValue);
+  
+  console.log('Performance metrics sent to Datadog');
+}
+
+sendMetrics().catch(console.error);
+```
+
+### Create Monitors Script
+```python
+# scripts/create_monitors.py
+import yaml
+import argparse
+from datadog import initialize, api
+
+def create_monitors_from_config(service, env, config_file):
+    """Create Datadog monitors from YAML configuration"""
+    initialize(api_key=os.environ['DD_API_KEY'], app_key=os.environ['DD_APP_KEY'])
+    
+    with open(config_file, 'r') as f:
+        config = yaml.safe_load(f)
+    
+    for monitor_config in config['monitors']:
+        monitor = {
+            "name": f"{service} - {monitor_config['name']}",
+            "type": monitor_config['type'],
+            "query": monitor_config['query'].format(service=service, env=env),
+            "message": monitor_config['message'],
+            "tags": [f"service:{service}", f"env:{env}"] + monitor_config.get('tags', []),
+            "options": monitor_config.get('options', {})
+        }
+        
+        result = api.Monitor.create(**monitor)
+        print(f"Created monitor: {monitor['name']} (ID: {result['id']})")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--service", required=True)
+    parser.add_argument("--env", required=True)
+    parser.add_argument("--thresholds-file", required=True)
+    args = parser.parse_args()
+    
+    create_monitors_from_config(args.service, args.env, args.thresholds_file)
+```
+
+### Collect Metrics Scripts
+```python
+# scripts/collect_azure_metrics.py
+import argparse
+from azure.monitor.query import MetricsQueryClient
+from azure.identity import DefaultAzureCredential
+from datadog import initialize, api
+
+def collect_azure_metrics(services, metrics):
+    credential = DefaultAzureCredential()
+    client = MetricsQueryClient(credential)
+    
+    initialize(api_key=os.environ['DD_API_KEY'], app_key=os.environ['DD_APP_KEY'])
+    
+    for service in services.split(','):
+        resource_id = f"/subscriptions/{os.environ['AZURE_SUBSCRIPTION_ID']}/resourceGroups/{service}-rg/providers/Microsoft.Web/sites/{service}"
+        
+        response = client.query_resource(
+            resource_id,
+            metric_names=metrics.split(','),
+            timespan=timedelta(hours=1)
+        )
+        
+        for metric in response.metrics:
+            for time_series in metric.timeseries:
+                for data_point in time_series.data:
+                    if data_point.average is not None:
+                        api.Metric.send([{
+                            'metric': f'azure.{service}.{metric.name.lower()}',
+                            'points': [(data_point.timestamp, data_point.average)],
+                            'tags': [f'service:{service}', 'cloud:azure']
+                        }])
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--services", required=True)
+    parser.add_argument("--metrics", required=True)
+    args = parser.parse_args()
+    
+    collect_azure_metrics(args.services, args.metrics)
+```
+
+---
+
 ## 🔗 Official Documentation Links
 
 ### Datadog Resources
