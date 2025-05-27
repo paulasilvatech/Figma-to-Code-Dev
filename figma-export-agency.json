@@ -1,0 +1,987 @@
+{
+  "document": {
+    "id": "0:1",
+    "name": "Nexus Creative - Digital Agency Portfolio",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:2",
+        "name": "Desktop - 1440",
+        "type": "CANVAS",
+        "children": [
+          {
+            "id": "2:3",
+            "name": "Landing Page",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 6000
+            },
+            "backgroundColor": {
+              "r": 0.969,
+              "g": 0.969,
+              "b": 0.969,
+              "a": 1
+            },
+            "children": [
+              {
+                "id": "3:4",
+                "name": "Navigation",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 80
+                },
+                "backgroundColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 0.95
+                },
+                "effects": [
+                  {
+                    "type": "BACKGROUND_BLUR",
+                    "radius": 10
+                  }
+                ],
+                "layoutMode": "HORIZONTAL",
+                "itemSpacing": 0,
+                "paddingLeft": 120,
+                "paddingRight": 120,
+                "paddingTop": 24,
+                "paddingBottom": 24,
+                "primaryAxisAlignItems": "CENTER",
+                "counterAxisAlignItems": "CENTER",
+                "children": [
+                  {
+                    "id": "3:5",
+                    "name": "Logo",
+                    "type": "TEXT",
+                    "characters": "Nexus.",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontWeight": 800,
+                      "fontSize": 28,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 1,
+                            "g": 0.42,
+                            "b": 0.42,
+                            "a": 1
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "3:6",
+                    "name": "Nav Menu",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 40,
+                    "layoutAlign": "CENTER",
+                    "layoutGrow": 1,
+                    "primaryAxisAlignItems": "CENTER",
+                    "children": [
+                      {
+                        "id": "3:7",
+                        "name": "Home",
+                        "type": "TEXT",
+                        "characters": "Home",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 500,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.2,
+                                "g": 0.2,
+                                "b": 0.2,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3:8",
+                    "name": "Let's Talk",
+                    "type": "FRAME",
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                    "paddingBottom": 12,
+                    "cornerRadius": 50,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.102,
+                          "g": 0.102,
+                          "b": 0.18,
+                          "a": 1
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "3:9",
+                        "name": "Button Text",
+                        "type": "TEXT",
+                        "characters": "Let's Talk",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 600,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4:10",
+                "name": "Hero Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 80,
+                  "width": 1440,
+                  "height": 800
+                },
+                "fills": [
+                  {
+                    "type": "SOLID",
+                    "color": {
+                      "r": 0.969,
+                      "g": 0.969,
+                      "b": 0.969,
+                      "a": 1
+                    }
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "4:11",
+                    "name": "Hero Background",
+                    "type": "ELLIPSE",
+                    "absoluteBoundingBox": {
+                      "x": 720,
+                      "y": -200,
+                      "width": 864,
+                      "height": 864
+                    },
+                    "fills": [
+                      {
+                        "type": "GRADIENT_LINEAR",
+                        "gradientHandlePositions": [
+                          { "x": 0, "y": 0 },
+                          { "x": 1, "y": 1 },
+                          { "x": 0, "y": 1 }
+                        ],
+                        "gradientStops": [
+                          {
+                            "position": 0,
+                            "color": {
+                              "r": 1,
+                              "g": 0.42,
+                              "b": 0.42,
+                              "a": 1
+                            }
+                          },
+                          {
+                            "position": 1,
+                            "color": {
+                              "r": 0.31,
+                              "g": 0.804,
+                              "b": 0.769,
+                              "a": 1
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "opacity": 0.1,
+                    "effects": [
+                      {
+                        "type": "LAYER_BLUR",
+                        "radius": 100
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4:12",
+                    "name": "Hero Content",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 64,
+                    "paddingLeft": 120,
+                    "paddingRight": 120,
+                    "paddingTop": 120,
+                    "children": [
+                      {
+                        "id": "4:13",
+                        "name": "Hero Text",
+                        "type": "FRAME",
+                        "layoutMode": "VERTICAL",
+                        "itemSpacing": 24,
+                        "children": [
+                          {
+                            "id": "4:14",
+                            "name": "Hero Title",
+                            "type": "TEXT",
+                            "characters": "We Craft Digital Experiences That Inspire",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 800,
+                              "fontSize": 64,
+                              "lineHeight": {
+                                "value": 110,
+                                "unit": "PERCENT"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.102,
+                                    "g": 0.102,
+                                    "b": 0.18,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "4:15",
+                            "name": "Gradient Text",
+                            "type": "TEXT",
+                            "characters": "Digital Experiences",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 800,
+                              "fontSize": 64,
+                              "fills": [
+                                {
+                                  "type": "GRADIENT_LINEAR",
+                                  "gradientHandlePositions": [
+                                    { "x": 0, "y": 0.5 },
+                                    { "x": 1, "y": 0.5 },
+                                    { "x": 0, "y": 1 }
+                                  ],
+                                  "gradientStops": [
+                                    {
+                                      "position": 0,
+                                      "color": {
+                                        "r": 1,
+                                        "g": 0.42,
+                                        "b": 0.42,
+                                        "a": 1
+                                      }
+                                    },
+                                    {
+                                      "position": 1,
+                                      "color": {
+                                        "r": 0.31,
+                                        "g": 0.804,
+                                        "b": 0.769,
+                                        "a": 1
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "4:16",
+                            "name": "Hero Subtitle",
+                            "type": "TEXT",
+                            "characters": "Transform your brand with cutting-edge design and development solutions that captivate audiences and drive results.",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 400,
+                              "fontSize": 20,
+                              "lineHeight": {
+                                "value": 160,
+                                "unit": "PERCENT"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.4,
+                                    "g": 0.4,
+                                    "b": 0.4,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "4:17",
+                            "name": "Hero Buttons",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "itemSpacing": 16,
+                            "children": [
+                              {
+                                "id": "4:18",
+                                "name": "Primary Button",
+                                "type": "FRAME",
+                                "paddingLeft": 40,
+                                "paddingRight": 40,
+                                "paddingTop": 16,
+                                "paddingBottom": 16,
+                                "cornerRadius": 50,
+                                "fills": [
+                                  {
+                                    "type": "GRADIENT_LINEAR",
+                                    "gradientHandlePositions": [
+                                      { "x": 0, "y": 0.5 },
+                                      { "x": 1, "y": 0.5 },
+                                      { "x": 0, "y": 1 }
+                                    ],
+                                    "gradientStops": [
+                                      {
+                                        "position": 0,
+                                        "color": {
+                                          "r": 1,
+                                          "g": 0.42,
+                                          "b": 0.42,
+                                          "a": 1
+                                        }
+                                      },
+                                      {
+                                        "position": 1,
+                                        "color": {
+                                          "r": 0.31,
+                                          "g": 0.804,
+                                          "b": 0.769,
+                                          "a": 1
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "effects": [
+                                  {
+                                    "type": "DROP_SHADOW",
+                                    "visible": true,
+                                    "color": {
+                                      "r": 1,
+                                      "g": 0.42,
+                                      "b": 0.42,
+                                      "a": 0.3
+                                    },
+                                    "blendMode": "NORMAL",
+                                    "offset": {
+                                      "x": 0,
+                                      "y": 10
+                                    },
+                                    "radius": 30
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "4:19",
+                            "name": "Stats",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "itemSpacing": 48,
+                            "children": [
+                              {
+                                "id": "4:20",
+                                "name": "Stat",
+                                "type": "FRAME",
+                                "layoutMode": "VERTICAL",
+                                "itemSpacing": 8,
+                                "primaryAxisAlignItems": "CENTER",
+                                "children": [
+                                  {
+                                    "id": "4:21",
+                                    "name": "Stat Value",
+                                    "type": "TEXT",
+                                    "characters": "150+",
+                                    "style": {
+                                      "fontFamily": "Inter",
+                                      "fontWeight": 800,
+                                      "fontSize": 40,
+                                      "fills": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 1,
+                                            "g": 0.42,
+                                            "b": 0.42,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id": "4:22",
+                                    "name": "Stat Label",
+                                    "type": "TEXT",
+                                    "characters": "Projects Completed",
+                                    "style": {
+                                      "fontFamily": "Inter",
+                                      "fontWeight": 400,
+                                      "fontSize": 14,
+                                      "fills": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 0.4,
+                                            "g": 0.4,
+                                            "b": 0.4,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "5:23",
+                        "name": "Hero Visual",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 720,
+                          "y": 200,
+                          "width": 600,
+                          "height": 600
+                        },
+                        "fills": [
+                          {
+                            "type": "GRADIENT_LINEAR",
+                            "gradientHandlePositions": [
+                              { "x": 0, "y": 0 },
+                              { "x": 1, "y": 1 },
+                              { "x": 0, "y": 1 }
+                            ],
+                            "gradientStops": [
+                              {
+                                "position": 0,
+                                "color": {
+                                  "r": 1,
+                                  "g": 0.42,
+                                  "b": 0.42,
+                                  "a": 1
+                                }
+                              },
+                              {
+                                "position": 1,
+                                "color": {
+                                  "r": 0.31,
+                                  "g": 0.804,
+                                  "b": 0.769,
+                                  "a": 1
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "cornerRadius": 20,
+                        "effects": [
+                          {
+                            "type": "DROP_SHADOW",
+                            "visible": true,
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 0.2
+                            },
+                            "blendMode": "NORMAL",
+                            "offset": {
+                              "x": 0,
+                              "y": 30
+                            },
+                            "radius": 60
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6:24",
+                "name": "Services Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 880,
+                  "width": 1440,
+                  "height": 800
+                },
+                "backgroundColor": {
+                  "r": 0.969,
+                  "g": 0.969,
+                  "b": 0.969,
+                  "a": 1
+                },
+                "paddingTop": 80,
+                "paddingBottom": 80,
+                "children": [
+                  {
+                    "id": "6:25",
+                    "name": "Service Card",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 120,
+                      "y": 1040,
+                      "width": 380,
+                      "height": 320
+                    },
+                    "backgroundColor": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1,
+                      "a": 1
+                    },
+                    "cornerRadius": 20,
+                    "paddingAll": 48,
+                    "effects": [
+                      {
+                        "type": "DROP_SHADOW",
+                        "visible": false,
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 0.15
+                        },
+                        "blendMode": "NORMAL",
+                        "offset": {
+                          "x": 0,
+                          "y": 30
+                        },
+                        "radius": 60
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "6:26",
+                        "name": "Service Icon",
+                        "type": "TEXT",
+                        "characters": "🎨",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 400,
+                          "fontSize": 48
+                        }
+                      },
+                      {
+                        "id": "6:27",
+                        "name": "Service Title",
+                        "type": "TEXT",
+                        "characters": "UI/UX Design",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 600,
+                          "fontSize": 24,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.102,
+                                "g": 0.102,
+                                "b": 0.18,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "6:28",
+                        "name": "Service Description",
+                        "type": "TEXT",
+                        "characters": "Create intuitive and beautiful interfaces that users love. From wireframes to high-fidelity prototypes.",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 400,
+                          "fontSize": 16,
+                          "lineHeight": {
+                            "value": 160,
+                            "unit": "PERCENT"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.4,
+                                "g": 0.4,
+                                "b": 0.4,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "6:29",
+                        "name": "Service Link",
+                        "type": "TEXT",
+                        "characters": "Learn More →",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 600,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 0.42,
+                                "b": 0.42,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "7:30",
+                "name": "Portfolio Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 1680,
+                  "width": 1440,
+                  "height": 1000
+                },
+                "backgroundColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                },
+                "paddingTop": 80,
+                "paddingBottom": 80,
+                "children": [
+                  {
+                    "id": "7:31",
+                    "name": "Filter Buttons",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 16,
+                    "primaryAxisAlignItems": "CENTER",
+                    "layoutAlign": "CENTER",
+                    "children": [
+                      {
+                        "id": "7:32",
+                        "name": "Filter Button",
+                        "type": "FRAME",
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
+                        "paddingTop": 12,
+                        "paddingBottom": 12,
+                        "cornerRadius": 50,
+                        "fills": [
+                          {
+                            "type": "GRADIENT_LINEAR",
+                            "gradientHandlePositions": [
+                              { "x": 0, "y": 0.5 },
+                              { "x": 1, "y": 0.5 },
+                              { "x": 0, "y": 1 }
+                            ],
+                            "gradientStops": [
+                              {
+                                "position": 0,
+                                "color": {
+                                  "r": 1,
+                                  "g": 0.42,
+                                  "b": 0.42,
+                                  "a": 1
+                                }
+                              },
+                              {
+                                "position": 1,
+                                "color": {
+                                  "r": 0.31,
+                                  "g": 0.804,
+                                  "b": 0.769,
+                                  "a": 1
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "7:33",
+                    "name": "Portfolio Grid",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 32,
+                    "counterAxisSpacing": 32,
+                    "paddingLeft": 120,
+                    "paddingRight": 120,
+                    "paddingTop": 48,
+                    "children": [
+                      {
+                        "id": "7:34",
+                        "name": "Portfolio Item",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 120,
+                          "y": 1840,
+                          "width": 380,
+                          "height": 400
+                        },
+                        "cornerRadius": 20,
+                        "clipsContent": true,
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "color": {
+                              "r": 1,
+                              "g": 0.42,
+                              "b": 0.42,
+                              "a": 1
+                            }
+                          }
+                        ],
+                        "children": [
+                          {
+                            "id": "7:35",
+                            "name": "Portfolio Overlay",
+                            "type": "FRAME",
+                            "absoluteBoundingBox": {
+                              "x": 120,
+                              "y": 1840,
+                              "width": 380,
+                              "height": 400
+                            },
+                            "fills": [
+                              {
+                                "type": "GRADIENT_LINEAR",
+                                "gradientHandlePositions": [
+                                  { "x": 0.5, "y": 0 },
+                                  { "x": 0.5, "y": 1 },
+                                  { "x": 0, "y": 0 }
+                                ],
+                                "gradientStops": [
+                                  {
+                                    "position": 0,
+                                    "color": {
+                                      "r": 0,
+                                      "g": 0,
+                                      "b": 0,
+                                      "a": 0
+                                    }
+                                  },
+                                  {
+                                    "position": 1,
+                                    "color": {
+                                      "r": 0.102,
+                                      "g": 0.102,
+                                      "b": 0.18,
+                                      "a": 0.9
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "paddingAll": 32,
+                            "layoutMode": "VERTICAL",
+                            "primaryAxisAlignItems": "FLEX_START",
+                            "counterAxisAlignItems": "FLEX_END",
+                            "opacity": 0
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
+    "colors": {
+      "primary": {
+        "name": "Primary Red",
+        "value": "#FF6B6B"
+      },
+      "secondary": {
+        "name": "Secondary Teal",
+        "value": "#4ECDC4"
+      },
+      "accent": {
+        "name": "Accent Yellow",
+        "value": "#FFE66D"
+      },
+      "dark": {
+        "name": "Dark",
+        "value": "#1A1A2E"
+      },
+      "light": {
+        "name": "Light",
+        "value": "#F7F7F7"
+      },
+      "text": {
+        "name": "Text",
+        "value": "#333333"
+      }
+    },
+    "typography": {
+      "heading-1": {
+        "fontFamily": "Inter",
+        "fontWeight": 800,
+        "fontSize": 64,
+        "lineHeight": 1.1,
+        "letterSpacing": -0.02
+      },
+      "heading-2": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 40,
+        "lineHeight": 1.2
+      },
+      "heading-3": {
+        "fontFamily": "Inter",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "lineHeight": 1.4
+      },
+      "body": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 1.6
+      },
+      "body-large": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 20,
+        "lineHeight": 1.6
+      }
+    },
+    "effects": {
+      "shadow-sm": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.05 },
+        "offset": { "x": 0, "y": 5 },
+        "radius": 15
+      },
+      "shadow-lg": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.15 },
+        "offset": { "x": 0, "y": 30 },
+        "radius": 60
+      },
+      "gradient-primary": {
+        "type": "GRADIENT_LINEAR",
+        "gradientHandlePositions": [
+          { "x": 0, "y": 0 },
+          { "x": 1, "y": 1 }
+        ],
+        "gradientStops": [
+          {
+            "position": 0,
+            "color": { "r": 1, "g": 0.42, "b": 0.42, "a": 1 }
+          },
+          {
+            "position": 1,
+            "color": { "r": 0.31, "g": 0.804, "b": 0.769, "a": 1 }
+          }
+        ]
+      }
+    }
+  },
+  "componentSets": {
+    "Button": {
+      "description": "Button component with variants",
+      "variants": {
+        "primary": {
+          "fills": [{
+            "type": "GRADIENT_LINEAR",
+            "gradientHandlePositions": [
+              { "x": 0, "y": 0.5 },
+              { "x": 1, "y": 0.5 }
+            ],
+            "gradientStops": [
+              { "position": 0, "color": { "r": 1, "g": 0.42, "b": 0.42, "a": 1 } },
+              { "position": 1, "color": { "r": 0.31, "g": 0.804, "b": 0.769, "a": 1 } }
+            ]
+          }],
+          "paddingLeft": 40,
+          "paddingRight": 40,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "cornerRadius": 50
+        },
+        "secondary": {
+          "fills": [],
+          "strokes": [{ 
+            "type": "SOLID", 
+            "color": { "r": 0.102, "g": 0.102, "b": 0.18, "a": 1 } 
+          }],
+          "strokeWeight": 2,
+          "paddingLeft": 40,
+          "paddingRight": 40,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "cornerRadius": 50
+        }
+      }
+    },
+    "ServiceCard": {
+      "description": "Service card component",
+      "properties": {
+        "backgroundColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "cornerRadius": 20,
+        "paddingAll": 48,
+        "effects": [{
+          "type": "DROP_SHADOW",
+          "color": { "r": 0, "g": 0, "b": 0, "a": 0.08 },
+          "offset": { "x": 0, "y": 5 },
+          "radius": 30
+        }]
+      }
+    }
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "product": {
+    "id": "nike-air-max-270-react",
+    "sku": "BQ0103-001",
+    "name": "Air Max 270 React",
+    "brand": "NIKE",
+    "category": "Running Shoes",
+    "subcategory": "Lifestyle",
+    "price": 129.99,
+    "originalPrice": 179.99,
+    "discount": 28,
+    "currency": "USD",
+    "availability": "in_stock",
+    "stockCount": 127,
+    "description": "The Nike Air Max 270 React combines Nike's tallest Air unit yet with soft, responsive React foam for incredible all-day comfort and style.",
+    "longDescription": "Step into the future of comfort with the Nike Air Max 270 React. This innovative shoe features Nike's largest heel Air unit yet, delivering unmatched cushioning and style. The React foam midsole provides exceptional energy return with every step, making it perfect for both athletic activities and casual wear. The asymmetrical lacing system ensures a secure, personalized fit, while rubber pods strategically placed on the midsole and outsole enhance durability and traction.",
+    "features": [
+      "270-degree Max Air unit delivers unrivaled, all-day comfort",
+      "React foam midsole provides extremely smooth, responsive ride",
+      "Rubber pods on midsole and outsole for enhanced durability",
+      "Asymmetrical lacing system creates secure, customized fit",
+      "Mesh upper with synthetic overlays for breathability and support",
+      "Rubber outsole with strategic traction pattern"
+    ],
+    "specifications": {
+      "weight": "320g (size 9)",
+      "materials": "Mesh, synthetic leather, rubber",
+      "technology": "Air Max 270, React foam",
+      "care": "Wipe with damp cloth, air dry",
+      "origin": "Vietnam"
+    },
+    "colors": [
+      {
+        "id": "black-white",
+        "name": "Black/White",
+        "hex": "#1a1a1a",
+        "available": true,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Black colorway front view",
+            "type": "front"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Black colorway side view",
+            "type": "side"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Black colorway back view",
+            "type": "back"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Black colorway sole view",
+            "type": "sole"
+          }
+        ]
+      },
+      {
+        "id": "university-red",
+        "name": "University Red",
+        "hex": "#dc2626",
+        "available": true,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Red colorway front view",
+            "type": "front"
+          },
+          {
+            "url": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Red colorway side view", 
+            "type": "side"
+          }
+        ]
+      },
+      {
+        "id": "photo-blue",
+        "name": "Photo Blue",
+        "hex": "#2563eb",
+        "available": true,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React Blue colorway front view",
+            "type": "front"
+          }
+        ]
+      },
+      {
+        "id": "triple-white",
+        "name": "Triple White",
+        "hex": "#ffffff",
+        "available": false,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1606734834439-3647aa91ae79?w=800&h=800&fit=crop",
+            "alt": "Nike Air Max 270 React White colorway front view",
+            "type": "front"
+          }
+        ]
+      }
+    ],
+    "sizes": [
+      { "value": "6", "available": false, "stock": 0, "label": "US 6" },
+      { "value": "6.5", "available": true, "stock": 3, "label": "US 6.5" },
+      { "value": "7", "available": true, "stock": 5, "label": "US 7" },
+      { "value": "7.5", "available": true, "stock": 12, "label": "US 7.5" },
+      { "value": "8", "available": true, "stock": 8, "label": "US 8" },
+      { "value": "8.5", "available": true, "stock": 15, "label": "US 8.5" },
+      { "value": "9", "available": true, "stock": 20, "label": "US 9" },
+      { "value": "9.5", "available": false, "stock": 0, "label": "US 9.5" },
+      { "value": "10", "available": true, "stock": 10, "label": "US 10" },
+      { "value": "10.5", "available": true, "stock": 7, "label": "US 10.5" },
+      { "value": "11", "available": true, "stock": 3, "label": "US 11" },
+      { "value": "11.5", "available": false, "stock": 0, "label": "US 11.5" },
+      { "value": "12", "available": true, "stock": 6, "label": "US 12" },
+      { "value": "13", "available": true, "stock": 2, "label": "US 13" }
+    ],
+    "rating": {
+      "average": 4.5,
+      "count": 234,
+      "distribution": {
+        "5": 156,
+        "4": 45,
+        "3": 18,
+        "2": 8,
+        "1": 7
+      }
+    },
+    "reviews": [
+      {
+        "id": "review-1",
+        "userId": "user-123",
+        "author": "Sarah M.",
+        "rating": 5,
+        "title": "Perfect for daily wear!",
+        "content": "These shoes are incredibly comfortable and stylish. The Air Max cushioning is noticeable and the React foam makes walking feel effortless. Great for both workouts and casual outings.",
+        "date": "2024-01-15",
+        "verified": true,
+        "helpful": 24,
+        "notHelpful": 2,
+        "images": [
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&h=300&fit=crop"
+        ]
+      },
+      {
+        "id": "review-2", 
+        "userId": "user-456",
+        "author": "Mike J.",
+        "rating": 4,
+        "title": "Great comfort, runs slightly large",
+        "content": "Love the comfort and style of these shoes. Only issue is they run about half a size large, so consider sizing down. The build quality is excellent as expected from Nike.",
+        "date": "2024-01-10",
+        "verified": true,
+        "helpful": 18,
+        "notHelpful": 1,
+        "images": []
+      },
+      {
+        "id": "review-3",
+        "userId": "user-789", 
+        "author": "Emma R.",
+        "rating": 5,
+        "title": "Best Air Max yet!",
+        "content": "I've owned several Air Max models and this is by far the most comfortable. The 270 air unit provides amazing heel cushioning and the React foam in the forefoot is perfect for long walks.",
+        "date": "2024-01-08",
+        "verified": true,
+        "helpful": 31,
+        "notHelpful": 0,
+        "images": []
+      }
+    ],
+    "tags": ["running", "lifestyle", "air-max", "react-foam", "casual", "athletic"],
+    "shipping": {
+      "free": true,
+      "threshold": 75,
+      "estimatedDays": "3-5",
+      "express": {
+        "available": true,
+        "cost": 15.99,
+        "estimatedDays": "1-2"
+      }
+    },
+    "returns": {
+      "period": 60,
+      "freeReturns": true,
+      "conditions": "Unworn condition with original packaging"
+    },
+    "warranty": {
+      "period": "2 years",
+      "coverage": "Manufacturing defects"
+    }
+  },
+  "relatedProducts": [
+    {
+      "id": "nike-air-max-90",
+      "name": "Air Max 90",
+      "price": 109.99,
+      "originalPrice": 119.99,
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop",
+      "colors": ["white", "black", "red"],
+      "category": "running"
+    },
+    {
+      "id": "nike-react-infinity",
+      "name": "React Infinity Run",
+      "price": 159.99,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1600472178440-b72b1e6bdc39?w=400&h=400&fit=crop",
+      "colors": ["black", "white", "blue"],
+      "category": "running"
+    },
+    {
+      "id": "nike-air-zoom-pegasus",
+      "name": "Air Zoom Pegasus 39",
+      "price": 129.99,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&h=400&fit=crop",
+      "colors": ["white", "black", "gray"],
+      "category": "running"
+    },
+    {
+      "id": "nike-blazer-mid",
+      "name": "Blazer Mid '77",
+      "price": 99.99,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=400&h=400&fit=crop",
+      "colors": ["white", "black", "navy"],
+      "category": "lifestyle"
+    }
+  ],
+  "navigation": {
+    "breadcrumb": [
+      { "name": "Home", "url": "/" },
+      { "name": "Men", "url": "/men" },
+      { "name": "Shoes", "url": "/men/shoes" },
+      { "name": "Running", "url": "/men/shoes/running" },
+      { "name": "Air Max 270 React", "url": "/product/nike-air-max-270-react" }
+    ]
+  },
+  "metadata": {
+    "title": "Nike Air Max 270 React - Men's Running Shoes",
+    "description": "Shop the Nike Air Max 270 React featuring Nike's tallest Air unit and React foam for ultimate comfort. Available in multiple colors with free shipping.",
+    "keywords": ["nike", "air max", "270", "react", "running shoes", "men", "comfortable", "athletic"],
+    "openGraph": {
+      "title": "Nike Air Max 270 React - Ultimate Comfort",
+      "description": "Experience the perfect blend of style and comfort with Nike's innovative Air Max technology.",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&h=630&fit=crop",
+      "url": "https://store.nike.com/product/air-max-270-react"
+    }
+  },
+  "api": {
+    "endpoints": {
+      "product": "/api/products/nike-air-max-270-react",
+      "reviews": "/api/products/nike-air-max-270-react/reviews",
+      "related": "/api/products/nike-air-max-270-react/related",
+      "availability": "/api/products/nike-air-max-270-react/availability",
+      "cart": "/api/cart",
+      "wishlist": "/api/wishlist"
+    }
+  }
+}

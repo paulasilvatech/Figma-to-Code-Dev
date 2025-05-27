@@ -1,0 +1,447 @@
+{
+  "agency": {
+    "name": "Nexus Creative",
+    "tagline": "We Craft Digital Experiences That Inspire",
+    "logo": "Nexus.",
+    "description": "A forward-thinking digital agency specializing in cutting-edge design and development solutions that captivate audiences and drive meaningful results.",
+    "founded": 2019,
+    "location": "San Francisco, CA",
+    "website": "https://nexuscreative.com",
+    "email": "hello@nexuscreative.com",
+    "phone": "+1 (555) 123-4567",
+    "social": {
+      "instagram": "https://instagram.com/nexuscreative",
+      "twitter": "https://twitter.com/nexuscreative",
+      "linkedin": "https://linkedin.com/company/nexuscreative",
+      "dribbble": "https://dribbble.com/nexuscreative",
+      "behance": "https://behance.net/nexuscreative"
+    },
+    "heroContent": {
+      "title": "We Craft Digital Experiences That Inspire",
+      "subtitle": "Transform your brand with cutting-edge design and development solutions that captivate audiences and drive results.",
+      "ctaPrimary": "View Our Work",
+      "ctaSecondary": "Start a Project",
+      "backgroundVideo": "https://player.vimeo.com/video/123456789",
+      "stats": [
+        { "value": "150+", "label": "Projects Completed", "description": "Successful launches" },
+        { "value": "50+", "label": "Happy Clients", "description": "Ongoing partnerships" },
+        { "value": "5+", "label": "Years Experience", "description": "Industry expertise" },
+        { "value": "25+", "label": "Team Members", "description": "Creative professionals" }
+      ]
+    },
+    "services": [
+      {
+        "id": "ui-ux-design",
+        "icon": "🎨",
+        "title": "UI/UX Design",
+        "description": "Create intuitive and beautiful interfaces that users love. From wireframes to high-fidelity prototypes, we design experiences that convert.",
+        "features": [
+          "User Research & Testing",
+          "Wireframing & Prototyping", 
+          "Visual Design Systems",
+          "Mobile-First Design",
+          "Accessibility Compliance"
+        ],
+        "tools": ["Figma", "Sketch", "Adobe XD", "Principle"],
+        "price": "Starting at $5,000",
+        "duration": "4-8 weeks"
+      },
+      {
+        "id": "web-development",
+        "icon": "💻",
+        "title": "Web Development",
+        "description": "Build fast, responsive websites using the latest technologies. Custom solutions tailored to your specific needs and business goals.",
+        "features": [
+          "React & Next.js Development",
+          "Custom CMS Integration",
+          "E-commerce Solutions",
+          "Performance Optimization",
+          "SEO & Analytics Setup"
+        ],
+        "tools": ["React", "Next.js", "Node.js", "MongoDB"],
+        "price": "Starting at $8,000",
+        "duration": "6-12 weeks"
+      },
+      {
+        "id": "mobile-apps",
+        "icon": "📱",
+        "title": "Mobile Applications",
+        "description": "Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android devices.",
+        "features": [
+          "Native iOS & Android",
+          "React Native Development", 
+          "App Store Optimization",
+          "Push Notifications",
+          "Analytics Integration"
+        ],
+        "tools": ["React Native", "Swift", "Kotlin", "Flutter"],
+        "price": "Starting at $15,000",
+        "duration": "12-20 weeks"
+      },
+      {
+        "id": "brand-strategy",
+        "icon": "🎯",
+        "title": "Brand Strategy",
+        "description": "Develop a strong brand identity that resonates with your target audience and stands out in the competitive marketplace.",
+        "features": [
+          "Brand Identity Design",
+          "Logo & Visual Assets",
+          "Brand Guidelines",
+          "Marketing Collateral",
+          "Brand Voice & Messaging"
+        ],
+        "tools": ["Adobe Creative Suite", "Figma", "Miro"],
+        "price": "Starting at $6,000",
+        "duration": "4-6 weeks"
+      },
+      {
+        "id": "digital-marketing",
+        "icon": "📈",
+        "title": "Digital Marketing",
+        "description": "Grow your online presence with targeted campaigns and data-driven strategies that deliver measurable results.",
+        "features": [
+          "Social Media Strategy",
+          "Content Marketing",
+          "SEO Optimization",
+          "PPC Advertising",
+          "Analytics & Reporting"
+        ],
+        "tools": ["Google Analytics", "Facebook Ads", "Mailchimp"],
+        "price": "Starting at $3,000/month",
+        "duration": "Ongoing"
+      },
+      {
+        "id": "motion-design",
+        "icon": "🎬",
+        "title": "Motion Design",
+        "description": "Bring your brand to life with engaging animations and interactive experiences that captivate and inform your audience.",
+        "features": [
+          "2D/3D Animation",
+          "Interactive Prototypes",
+          "Video Production",
+          "Micro-interactions",
+          "Loading Animations"
+        ],
+        "tools": ["After Effects", "Lottie", "Framer Motion"],
+        "price": "Starting at $4,000",
+        "duration": "3-6 weeks"
+      }
+    ],
+    "portfolio": [
+      {
+        "id": "ecommerce-platform",
+        "title": "Modern E-Commerce Platform",
+        "category": "web",
+        "client": "RetailMax",
+        "description": "Complete redesign and development of a luxury fashion e-commerce platform with advanced filtering and AR try-on features.",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["UI/UX", "E-commerce", "React", "Node.js"],
+        "color": "#FF6B6B",
+        "year": 2023,
+        "duration": "16 weeks",
+        "results": {
+          "conversionIncrease": "45%",
+          "pageLoadImprovement": "60%",
+          "userEngagement": "78%"
+        },
+        "technologies": ["React", "Next.js", "Stripe", "MongoDB"],
+        "url": "https://retailmax-demo.nexuscreative.com"
+      },
+      {
+        "id": "fitness-tracking-app",
+        "title": "AI-Powered Fitness Companion",
+        "category": "mobile",
+        "client": "FitGenius",
+        "description": "iOS & Android health companion app with AI-powered workout recommendations and social features.",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1592335991949-7a5fd6d4c9ed?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["Mobile", "React Native", "AI", "Health"],
+        "color": "#4ECDC4",
+        "year": 2023,
+        "duration": "20 weeks",
+        "results": {
+          "appStoreRating": "4.8/5",
+          "downloads": "100K+",
+          "userRetention": "85%"
+        },
+        "technologies": ["React Native", "TensorFlow", "Firebase"],
+        "url": "https://apps.apple.com/fitgenius"
+      },
+      {
+        "id": "startup-branding",
+        "title": "TechFlow Brand Identity",
+        "category": "branding",
+        "client": "TechFlow",
+        "description": "Complete brand identity system for a B2B SaaS startup including logo, guidelines, and marketing materials.",
+        "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1634752636403-9cc25d40e53d?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["Branding", "Logo Design", "Guidelines"],
+        "color": "#FFE66D",
+        "year": 2024,
+        "duration": "6 weeks",
+        "results": {
+          "brandRecognition": "200%",
+          "leadGeneration": "150%",
+          "marketShare": "35%"
+        },
+        "technologies": ["Adobe Creative Suite", "Figma"],
+        "url": "https://techflow.com"
+      },
+      {
+        "id": "restaurant-website",
+        "title": "Artisan Restaurant Experience",
+        "category": "web",
+        "client": "Bella Vista",
+        "description": "Elegant restaurant website with online reservations, menu showcase, and immersive photo gallery.",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["Web Design", "Hospitality", "Reservations"],
+        "color": "#9B59B6",
+        "year": 2023,
+        "duration": "8 weeks",
+        "results": {
+          "onlineReservations": "300%",
+          "websiteTraffic": "180%",
+          "customerSatisfaction": "95%"
+        },
+        "technologies": ["Gatsby", "Contentful", "OpenTable API"],
+        "url": "https://bellavista-demo.nexuscreative.com"
+      },
+      {
+        "id": "crypto-dashboard",
+        "title": "CryptoTracker Pro Dashboard",
+        "category": "web",
+        "client": "CryptoTracker",
+        "description": "Real-time cryptocurrency tracking dashboard with advanced analytics and portfolio management.",
+        "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["Dashboard", "Crypto", "Real-time", "Analytics"],
+        "color": "#3498DB",
+        "year": 2024,
+        "duration": "12 weeks",
+        "results": {
+          "activeUsers": "50K+",
+          "dataAccuracy": "99.9%",
+          "loadTime": "< 2s"
+        },
+        "technologies": ["React", "D3.js", "WebSocket", "Node.js"],
+        "url": "https://cryptotracker-pro.com"
+      },
+      {
+        "id": "event-mobile-app",
+        "title": "EventHub Mobile Experience",
+        "category": "mobile",
+        "client": "EventHub",
+        "description": "Event discovery and ticketing mobile app with social features and live event streaming.",
+        "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=800&fit=crop"
+        ],
+        "tags": ["Mobile", "Events", "Social", "Streaming"],
+        "color": "#E74C3C",
+        "year": 2023,
+        "duration": "18 weeks",
+        "results": {
+          "ticketsSold": "500K+",
+          "userRating": "4.9/5",
+          "eventPartners": "1000+"
+        },
+        "technologies": ["Flutter", "Firebase", "Stripe", "WebRTC"],
+        "url": "https://eventhub-app.com"
+      }
+    ],
+    "team": [
+      {
+        "id": "alex-johnson",
+        "name": "Alex Johnson",
+        "role": "Creative Director & Founder",
+        "bio": "Leading creative vision with 10+ years of experience in digital design. Passionate about creating meaningful brand experiences.",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+        "skills": ["Creative Direction", "Brand Strategy", "UI/UX Design"],
+        "experience": "10+ years",
+        "education": "MFA Design, Stanford University",
+        "social": {
+          "twitter": "https://twitter.com/alexjohnson",
+          "linkedin": "https://linkedin.com/in/alexjohnson",
+          "instagram": "https://instagram.com/alexjohnson_design"
+        },
+        "awards": ["Webby Award 2023", "CSS Design Award", "Awwwards SOTD"]
+      },
+      {
+        "id": "sarah-chen",
+        "name": "Sarah Chen",
+        "role": "Lead Developer",
+        "bio": "Full-stack developer passionate about creating seamless digital experiences. Expert in modern web technologies and performance optimization.",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=300&h=300&fit=crop&crop=face",
+        "skills": ["React", "Node.js", "DevOps", "Mobile Development"],
+        "experience": "8+ years",
+        "education": "BS Computer Science, MIT",
+        "social": {
+          "twitter": "https://twitter.com/sarahchen_dev",
+          "linkedin": "https://linkedin.com/in/sarahchen",
+          "github": "https://github.com/sarahchen"
+        },
+        "awards": ["Tech Innovator 2023", "Open Source Contributor"]
+      },
+      {
+        "id": "marcus-williams",
+        "name": "Marcus Williams",
+        "role": "UX Research Lead",
+        "bio": "User experience researcher focused on understanding human behavior and translating insights into intuitive design solutions.",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+        "skills": ["User Research", "Data Analysis", "Prototyping", "Testing"],
+        "experience": "7+ years",
+        "education": "PhD Psychology, UC Berkeley",
+        "social": {
+          "twitter": "https://twitter.com/marcusux",
+          "linkedin": "https://linkedin.com/in/marcuswilliams"
+        },
+        "awards": ["UX Research Excellence 2022"]
+      },
+      {
+        "id": "jessica-martinez",
+        "name": "Jessica Martinez",
+        "role": "Brand Strategist",
+        "bio": "Strategic thinker who helps brands find their unique voice and position in the market. Expert in brand development and storytelling.",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+        "skills": ["Brand Strategy", "Market Research", "Content Strategy"],
+        "experience": "9+ years",
+        "education": "MBA Marketing, Harvard Business School",
+        "social": {
+          "twitter": "https://twitter.com/jessicabrand",
+          "linkedin": "https://linkedin.com/in/jessicamartinez"
+        },
+        "awards": ["Brand Strategist of the Year 2023"]
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "client": "David Kim",
+        "company": "TechFlow",
+        "role": "CEO",
+        "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
+        "content": "Nexus Creative transformed our brand completely. Their strategic approach and creative execution exceeded all expectations. The results speak for themselves - 200% increase in brand recognition.",
+        "rating": 5,
+        "project": "Brand Identity"
+      },
+      {
+        "id": "testimonial-2",
+        "client": "Maria Rodriguez",
+        "company": "FitGenius",
+        "role": "Product Manager",
+        "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face",
+        "content": "The mobile app they developed is simply outstanding. The user experience is intuitive, and the performance is flawless. Our users love it, and we've maintained an 85% retention rate.",
+        "rating": 5,
+        "project": "Mobile App Development"
+      },
+      {
+        "id": "testimonial-3",
+        "client": "James Thompson",
+        "company": "RetailMax",
+        "role": "CMO",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+        "content": "Working with Nexus was a game-changer for our e-commerce platform. Conversion rates increased by 45%, and our customers consistently praise the new shopping experience.",
+        "rating": 5,
+        "project": "E-commerce Platform"
+      }
+    ],
+    "process": [
+      {
+        "phase": "01",
+        "title": "Discovery & Strategy",
+        "description": "We start by understanding your business goals, target audience, and competitive landscape through comprehensive research and stakeholder interviews.",
+        "duration": "1-2 weeks",
+        "deliverables": ["Research Report", "Strategy Document", "Project Roadmap"]
+      },
+      {
+        "phase": "02",
+        "title": "Design & Prototyping",
+        "description": "Our design team creates wireframes, mockups, and interactive prototypes that bring your vision to life while ensuring optimal user experience.",
+        "duration": "2-4 weeks",
+        "deliverables": ["Wireframes", "Visual Designs", "Interactive Prototype"]
+      },
+      {
+        "phase": "03",
+        "title": "Development & Testing",
+        "description": "We build your solution using cutting-edge technologies, conducting thorough testing to ensure performance, security, and compatibility.",
+        "duration": "4-12 weeks",
+        "deliverables": ["Functional Product", "Test Reports", "Documentation"]
+      },
+      {
+        "phase": "04",
+        "title": "Launch & Optimization",
+        "description": "We handle the launch process and provide ongoing optimization based on real user data and feedback to maximize performance.",
+        "duration": "2-4 weeks",
+        "deliverables": ["Live Product", "Analytics Setup", "Performance Report"]
+      }
+    ]
+  },
+  "contact": {
+    "office": {
+      "address": "123 Innovation Drive, Suite 400",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94107",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.7749,
+        "lng": -122.4194
+      }
+    },
+    "hours": {
+      "monday": "9:00 AM - 6:00 PM",
+      "tuesday": "9:00 AM - 6:00 PM",
+      "wednesday": "9:00 AM - 6:00 PM",
+      "thursday": "9:00 AM - 6:00 PM",
+      "friday": "9:00 AM - 5:00 PM",
+      "weekend": "Closed"
+    },
+    "form": {
+      "fields": [
+        { "name": "name", "type": "text", "required": true, "label": "Full Name" },
+        { "name": "email", "type": "email", "required": true, "label": "Email Address" },
+        { "name": "company", "type": "text", "required": false, "label": "Company Name" },
+        { "name": "budget", "type": "select", "required": true, "label": "Project Budget", "options": ["< $10K", "$10K - $50K", "$50K - $100K", "$100K+"] },
+        { "name": "services", "type": "checkbox", "required": true, "label": "Services Needed", "options": ["UI/UX Design", "Web Development", "Mobile Apps", "Branding", "Digital Marketing"] },
+        { "name": "timeline", "type": "select", "required": true, "label": "Timeline", "options": ["ASAP", "1-3 months", "3-6 months", "6+ months"] },
+        { "name": "message", "type": "textarea", "required": true, "label": "Project Details" },
+        { "name": "attachment", "type": "file", "required": false, "label": "Attach Files (Optional)" }
+      ]
+    }
+  },
+  "seo": {
+    "title": "Nexus Creative - Digital Agency | UI/UX Design & Development",
+    "description": "Transform your brand with cutting-edge design and development solutions. Nexus Creative specializes in UI/UX design, web development, mobile apps, and branding.",
+    "keywords": ["digital agency", "ui ux design", "web development", "mobile app development", "branding", "san francisco"],
+    "openGraph": {
+      "title": "Nexus Creative - We Craft Digital Experiences That Inspire",
+      "description": "Award-winning digital agency specializing in innovative design and development solutions for forward-thinking brands.",
+      "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=630&fit=crop",
+      "url": "https://nexuscreative.com"
+    }
+  }
+}

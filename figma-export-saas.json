@@ -1,0 +1,1132 @@
+{
+  "document": {
+    "id": "0:1",
+    "name": "CloudSync - SaaS Platform",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:2",
+        "name": "Desktop - 1440",
+        "type": "CANVAS",
+        "children": [
+          {
+            "id": "2:3",
+            "name": "Landing Page",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 5000
+            },
+            "backgroundColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "children": [
+              {
+                "id": "3:4",
+                "name": "Navigation",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 80
+                },
+                "backgroundColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 0.95
+                },
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "visible": true,
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.1
+                    },
+                    "blendMode": "NORMAL",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "radius": 20
+                  },
+                  {
+                    "type": "BACKGROUND_BLUR",
+                    "radius": 10
+                  }
+                ],
+                "layoutMode": "HORIZONTAL",
+                "itemSpacing": 0,
+                "paddingLeft": 120,
+                "paddingRight": 120,
+                "paddingTop": 16,
+                "paddingBottom": 16,
+                "primaryAxisAlignItems": "CENTER",
+                "counterAxisAlignItems": "CENTER",
+                "children": [
+                  {
+                    "id": "3:5",
+                    "name": "Logo",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 8,
+                    "primaryAxisAlignItems": "CENTER",
+                    "children": [
+                      {
+                        "id": "3:6",
+                        "name": "Logo Icon",
+                        "type": "VECTOR",
+                        "absoluteBoundingBox": {
+                          "x": 120,
+                          "y": 25,
+                          "width": 30,
+                          "height": 30
+                        },
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "color": {
+                              "r": 0.368,
+                              "g": 0.447,
+                              "b": 0.894,
+                              "a": 1
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "id": "3:7",
+                        "name": "CloudSync",
+                        "type": "TEXT",
+                        "characters": "CloudSync",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 700,
+                          "fontSize": 24,
+                          "fills": [
+                            {
+                              "type": "GRADIENT_LINEAR",
+                              "gradientHandlePositions": [
+                                { "x": 0, "y": 0.5 },
+                                { "x": 1, "y": 0.5 },
+                                { "x": 0, "y": 1 }
+                              ],
+                              "gradientStops": [
+                                {
+                                  "position": 0,
+                                  "color": {
+                                    "r": 0.4,
+                                    "g": 0.494,
+                                    "b": 0.918,
+                                    "a": 1
+                                  }
+                                },
+                                {
+                                  "position": 1,
+                                  "color": {
+                                    "r": 0.467,
+                                    "g": 0.294,
+                                    "b": 0.635,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3:8",
+                    "name": "Nav Links",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 32,
+                    "layoutAlign": "CENTER",
+                    "layoutGrow": 1,
+                    "primaryAxisAlignItems": "CENTER",
+                    "children": [
+                      {
+                        "id": "3:9",
+                        "name": "Features",
+                        "type": "TEXT",
+                        "characters": "Features",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 500,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.09,
+                                "g": 0.169,
+                                "b": 0.302,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3:10",
+                    "name": "CTA Buttons",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 16,
+                    "children": [
+                      {
+                        "id": "3:11",
+                        "name": "Sign In",
+                        "type": "FRAME",
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
+                        "paddingTop": 12,
+                        "paddingBottom": 12,
+                        "cornerRadius": 8,
+                        "strokes": [
+                          {
+                            "type": "SOLID",
+                            "color": {
+                              "r": 0.368,
+                              "g": 0.447,
+                              "b": 0.894,
+                              "a": 1
+                            }
+                          }
+                        ],
+                        "strokeWeight": 2
+                      },
+                      {
+                        "id": "3:12",
+                        "name": "Get Started",
+                        "type": "FRAME",
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
+                        "paddingTop": 12,
+                        "paddingBottom": 12,
+                        "cornerRadius": 8,
+                        "fills": [
+                          {
+                            "type": "GRADIENT_LINEAR",
+                            "gradientHandlePositions": [
+                              { "x": 0, "y": 0.5 },
+                              { "x": 1, "y": 0.5 },
+                              { "x": 0, "y": 1 }
+                            ],
+                            "gradientStops": [
+                              {
+                                "position": 0,
+                                "color": {
+                                  "r": 0.4,
+                                  "g": 0.494,
+                                  "b": 0.918,
+                                  "a": 1
+                                }
+                              },
+                              {
+                                "position": 1,
+                                "color": {
+                                  "r": 0.467,
+                                  "g": 0.294,
+                                  "b": 0.635,
+                                  "a": 1
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "effects": [
+                          {
+                            "type": "DROP_SHADOW",
+                            "visible": true,
+                            "color": {
+                              "r": 0.4,
+                              "g": 0.494,
+                              "b": 0.918,
+                              "a": 0.4
+                            },
+                            "blendMode": "NORMAL",
+                            "offset": {
+                              "x": 0,
+                              "y": 4
+                            },
+                            "radius": 15
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4:13",
+                "name": "Hero Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 80,
+                  "width": 1440,
+                  "height": 800
+                },
+                "fills": [
+                  {
+                    "type": "GRADIENT_LINEAR",
+                    "gradientHandlePositions": [
+                      { "x": 0, "y": 0 },
+                      { "x": 0, "y": 1 },
+                      { "x": 1, "y": 0 }
+                    ],
+                    "gradientStops": [
+                      {
+                        "position": 0,
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1,
+                          "a": 0
+                        }
+                      },
+                      {
+                        "position": 1,
+                        "color": {
+                          "r": 0.957,
+                          "g": 0.961,
+                          "b": 0.969,
+                          "a": 0.5
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "layoutMode": "VERTICAL",
+                "paddingTop": 120,
+                "paddingBottom": 80,
+                "primaryAxisAlignItems": "CENTER",
+                "children": [
+                  {
+                    "id": "4:14",
+                    "name": "Hero Content",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 64,
+                    "maxWidth": 1200,
+                    "children": [
+                      {
+                        "id": "4:15",
+                        "name": "Hero Text",
+                        "type": "FRAME",
+                        "layoutMode": "VERTICAL",
+                        "itemSpacing": 24,
+                        "children": [
+                          {
+                            "id": "4:16",
+                            "name": "Hero Title",
+                            "type": "TEXT",
+                            "characters": "Sync Your Data Across All Devices Seamlessly",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 800,
+                              "fontSize": 56,
+                              "lineHeight": {
+                                "value": 120,
+                                "unit": "PERCENT"
+                              },
+                              "fills": [
+                                {
+                                  "type": "GRADIENT_LINEAR",
+                                  "gradientHandlePositions": [
+                                    { "x": 0, "y": 0 },
+                                    { "x": 1, "y": 1 },
+                                    { "x": 0, "y": 1 }
+                                  ],
+                                  "gradientStops": [
+                                    {
+                                      "position": 0,
+                                      "color": {
+                                        "r": 0.4,
+                                        "g": 0.494,
+                                        "b": 0.918,
+                                        "a": 1
+                                      }
+                                    },
+                                    {
+                                      "position": 1,
+                                      "color": {
+                                        "r": 0.467,
+                                        "g": 0.294,
+                                        "b": 0.635,
+                                        "a": 1
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "4:17",
+                            "name": "Hero Subtitle",
+                            "type": "TEXT",
+                            "characters": "CloudSync provides real-time synchronization, automatic backups, and enterprise-grade security for teams of all sizes.",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 400,
+                              "fontSize": 20,
+                              "lineHeight": {
+                                "value": 160,
+                                "unit": "PERCENT"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.424,
+                                    "g": 0.459,
+                                    "b": 0.49,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "4:18",
+                            "name": "Hero Buttons",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "itemSpacing": 16,
+                            "children": [
+                              {
+                                "id": "4:19",
+                                "name": "Start Free Trial",
+                                "type": "FRAME",
+                                "paddingLeft": 32,
+                                "paddingRight": 32,
+                                "paddingTop": 16,
+                                "paddingBottom": 16,
+                                "cornerRadius": 8,
+                                "fills": [
+                                  {
+                                    "type": "GRADIENT_LINEAR",
+                                    "gradientHandlePositions": [
+                                      { "x": 0, "y": 0.5 },
+                                      { "x": 1, "y": 0.5 },
+                                      { "x": 0, "y": 1 }
+                                    ],
+                                    "gradientStops": [
+                                      {
+                                        "position": 0,
+                                        "color": {
+                                          "r": 0.4,
+                                          "g": 0.494,
+                                          "b": 0.918,
+                                          "a": 1
+                                        }
+                                      },
+                                      {
+                                        "position": 1,
+                                        "color": {
+                                          "r": 0.467,
+                                          "g": 0.294,
+                                          "b": 0.635,
+                                          "a": 1
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "4:20",
+                            "name": "Trust Badges",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "itemSpacing": 32,
+                            "children": [
+                              {
+                                "id": "4:21",
+                                "name": "Trust Badge",
+                                "type": "FRAME",
+                                "layoutMode": "HORIZONTAL",
+                                "itemSpacing": 8,
+                                "children": [
+                                  {
+                                    "id": "4:22",
+                                    "name": "Icon",
+                                    "type": "VECTOR",
+                                    "absoluteBoundingBox": {
+                                      "width": 20,
+                                      "height": 20
+                                    },
+                                    "fills": [
+                                      {
+                                        "type": "SOLID",
+                                        "color": {
+                                          "r": 0.176,
+                                          "g": 0.804,
+                                          "b": 0.522,
+                                          "a": 1
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "4:23",
+                                    "name": "Text",
+                                    "type": "TEXT",
+                                    "characters": "No credit card required",
+                                    "style": {
+                                      "fontFamily": "Inter",
+                                      "fontWeight": 400,
+                                      "fontSize": 14,
+                                      "fills": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 0.424,
+                                            "g": 0.459,
+                                            "b": 0.49,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "5:24",
+                        "name": "Dashboard Preview",
+                        "type": "FRAME",
+                        "absoluteBoundingBox": {
+                          "x": 720,
+                          "y": 200,
+                          "width": 600,
+                          "height": 400
+                        },
+                        "backgroundColor": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1,
+                          "a": 1
+                        },
+                        "cornerRadius": 16,
+                        "effects": [
+                          {
+                            "type": "DROP_SHADOW",
+                            "visible": true,
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 0.15
+                            },
+                            "blendMode": "NORMAL",
+                            "offset": {
+                              "x": 0,
+                              "y": 20
+                            },
+                            "radius": 60
+                          }
+                        ],
+                        "paddingAll": 24,
+                        "children": [
+                          {
+                            "id": "5:25",
+                            "name": "Stats Grid",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "itemSpacing": 16,
+                            "children": [
+                              {
+                                "id": "5:26",
+                                "name": "Stat Card",
+                                "type": "FRAME",
+                                "layoutMode": "VERTICAL",
+                                "itemSpacing": 8,
+                                "paddingAll": 16,
+                                "cornerRadius": 8,
+                                "fills": [
+                                  {
+                                    "type": "SOLID",
+                                    "color": {
+                                      "r": 0.973,
+                                      "g": 0.976,
+                                      "b": 0.98,
+                                      "a": 1
+                                    }
+                                  }
+                                ],
+                                "children": [
+                                  {
+                                    "id": "5:27",
+                                    "name": "Stat Value",
+                                    "type": "TEXT",
+                                    "characters": "2.4TB",
+                                    "style": {
+                                      "fontFamily": "Inter",
+                                      "fontWeight": 700,
+                                      "fontSize": 24,
+                                      "fills": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 0.368,
+                                            "g": 0.447,
+                                            "b": 0.894,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "id": "5:28",
+                                    "name": "Stat Label",
+                                    "type": "TEXT",
+                                    "characters": "Storage Used",
+                                    "style": {
+                                      "fontFamily": "Inter",
+                                      "fontWeight": 400,
+                                      "fontSize": 12,
+                                      "fills": [
+                                        {
+                                          "type": "SOLID",
+                                          "color": {
+                                            "r": 0.424,
+                                            "g": 0.459,
+                                            "b": 0.49,
+                                            "a": 1
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6:29",
+                "name": "Features Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 880,
+                  "width": 1440,
+                  "height": 800
+                },
+                "backgroundColor": {
+                  "r": 0.973,
+                  "g": 0.976,
+                  "b": 0.98,
+                  "a": 1
+                },
+                "paddingTop": 80,
+                "paddingBottom": 80,
+                "children": [
+                  {
+                    "id": "6:30",
+                    "name": "Section Header",
+                    "type": "FRAME",
+                    "layoutMode": "VERTICAL",
+                    "itemSpacing": 16,
+                    "primaryAxisAlignItems": "CENTER",
+                    "maxWidth": 600,
+                    "layoutAlign": "CENTER",
+                    "children": [
+                      {
+                        "id": "6:31",
+                        "name": "Section Title",
+                        "type": "TEXT",
+                        "characters": "Everything You Need for Seamless Sync",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 700,
+                          "fontSize": 40,
+                          "textAlignHorizontal": "CENTER",
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.067,
+                                "g": 0.094,
+                                "b": 0.153,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "6:32",
+                    "name": "Features Grid",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 32,
+                    "counterAxisSpacing": 32,
+                    "maxWidth": 1200,
+                    "layoutAlign": "CENTER",
+                    "children": [
+                      {
+                        "id": "6:33",
+                        "name": "Feature Card",
+                        "type": "FRAME",
+                        "layoutMode": "VERTICAL",
+                        "itemSpacing": 16,
+                        "paddingAll": 32,
+                        "cornerRadius": 16,
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "color": {
+                              "r": 1,
+                              "g": 1,
+                              "b": 1,
+                              "a": 1
+                            }
+                          }
+                        ],
+                        "effects": [
+                          {
+                            "type": "DROP_SHADOW",
+                            "visible": false,
+                            "color": {
+                              "r": 0,
+                              "g": 0,
+                              "b": 0,
+                              "a": 0.1
+                            },
+                            "blendMode": "NORMAL",
+                            "offset": {
+                              "x": 0,
+                              "y": 10
+                            },
+                            "radius": 40
+                          }
+                        ],
+                        "children": [
+                          {
+                            "id": "6:34",
+                            "name": "Feature Icon",
+                            "type": "ELLIPSE",
+                            "absoluteBoundingBox": {
+                              "width": 60,
+                              "height": 60
+                            },
+                            "fills": [
+                              {
+                                "type": "GRADIENT_LINEAR",
+                                "gradientHandlePositions": [
+                                  { "x": 0, "y": 0 },
+                                  { "x": 1, "y": 1 },
+                                  { "x": 0, "y": 1 }
+                                ],
+                                "gradientStops": [
+                                  {
+                                    "position": 0,
+                                    "color": {
+                                      "r": 0.4,
+                                      "g": 0.494,
+                                      "b": 0.918,
+                                      "a": 1
+                                    }
+                                  },
+                                  {
+                                    "position": 1,
+                                    "color": {
+                                      "r": 0.467,
+                                      "g": 0.294,
+                                      "b": 0.635,
+                                      "a": 1
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "6:35",
+                            "name": "Feature Title",
+                            "type": "TEXT",
+                            "characters": "Real-time Sync",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 600,
+                              "fontSize": 20,
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.067,
+                                    "g": 0.094,
+                                    "b": 0.153,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "id": "6:36",
+                            "name": "Feature Description",
+                            "type": "TEXT",
+                            "characters": "Changes sync instantly across all your devices. Work offline and sync when you're back online.",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 400,
+                              "fontSize": 16,
+                              "lineHeight": {
+                                "value": 160,
+                                "unit": "PERCENT"
+                              },
+                              "fills": [
+                                {
+                                  "type": "SOLID",
+                                  "color": {
+                                    "r": 0.424,
+                                    "g": 0.459,
+                                    "b": 0.49,
+                                    "a": 1
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "7:37",
+                "name": "Pricing Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 1680,
+                  "width": 1440,
+                  "height": 800
+                },
+                "backgroundColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 1
+                },
+                "paddingTop": 80,
+                "paddingBottom": 80,
+                "children": [
+                  {
+                    "id": "7:38",
+                    "name": "Pricing Grid",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 32,
+                    "maxWidth": 1000,
+                    "layoutAlign": "CENTER",
+                    "children": [
+                      {
+                        "id": "7:39",
+                        "name": "Pricing Card",
+                        "type": "FRAME",
+                        "layoutMode": "VERTICAL",
+                        "itemSpacing": 24,
+                        "paddingAll": 32,
+                        "cornerRadius": 16,
+                        "fills": [
+                          {
+                            "type": "SOLID",
+                            "color": {
+                              "r": 0.973,
+                              "g": 0.976,
+                              "b": 0.98,
+                              "a": 1
+                            }
+                          }
+                        ],
+                        "children": [
+                          {
+                            "id": "7:40",
+                            "name": "Plan Name",
+                            "type": "TEXT",
+                            "characters": "Starter",
+                            "style": {
+                              "fontFamily": "Inter",
+                              "fontWeight": 600,
+                              "fontSize": 24,
+                              "textAlignHorizontal": "CENTER"
+                            }
+                          },
+                          {
+                            "id": "7:41",
+                            "name": "Price",
+                            "type": "FRAME",
+                            "layoutMode": "HORIZONTAL",
+                            "primaryAxisAlignItems": "BASELINE",
+                            "counterAxisAlignItems": "CENTER",
+                            "children": [
+                              {
+                                "id": "7:42",
+                                "name": "Price Value",
+                                "type": "TEXT",
+                                "characters": "$9",
+                                "style": {
+                                  "fontFamily": "Inter",
+                                  "fontWeight": 700,
+                                  "fontSize": 48
+                                }
+                              },
+                              {
+                                "id": "7:43",
+                                "name": "Period",
+                                "type": "TEXT",
+                                "characters": "/month",
+                                "style": {
+                                  "fontFamily": "Inter",
+                                  "fontWeight": 400,
+                                  "fontSize": 16
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": "7:44",
+                        "name": "Pricing Card Featured",
+                        "type": "FRAME",
+                        "layoutMode": "VERTICAL",
+                        "itemSpacing": 24,
+                        "paddingAll": 32,
+                        "cornerRadius": 16,
+                        "fills": [
+                          {
+                            "type": "GRADIENT_LINEAR",
+                            "gradientHandlePositions": [
+                              { "x": 0, "y": 0 },
+                              { "x": 1, "y": 1 },
+                              { "x": 0, "y": 1 }
+                            ],
+                            "gradientStops": [
+                              {
+                                "position": 0,
+                                "color": {
+                                  "r": 0.4,
+                                  "g": 0.494,
+                                  "b": 0.918,
+                                  "a": 1
+                                }
+                              },
+                              {
+                                "position": 1,
+                                "color": {
+                                  "r": 0.467,
+                                  "g": 0.294,
+                                  "b": 0.635,
+                                  "a": 1
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "effects": [
+                          {
+                            "type": "DROP_SHADOW",
+                            "visible": true,
+                            "color": {
+                              "r": 0.4,
+                              "g": 0.494,
+                              "b": 0.918,
+                              "a": 0.3
+                            },
+                            "blendMode": "NORMAL",
+                            "offset": {
+                              "x": 0,
+                              "y": 20
+                            },
+                            "radius": 60
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
+    "colors": {
+      "primary": {
+        "name": "Primary",
+        "value": "#5e72e4"
+      },
+      "secondary": {
+        "name": "Secondary",
+        "value": "#825ee4"
+      },
+      "success": {
+        "name": "Success",
+        "value": "#2dce89"
+      },
+      "info": {
+        "name": "Info",
+        "value": "#11cdef"
+      },
+      "warning": {
+        "name": "Warning",
+        "value": "#fb6340"
+      },
+      "danger": {
+        "name": "Danger",
+        "value": "#f5365c"
+      },
+      "dark": {
+        "name": "Dark",
+        "value": "#172b4d"
+      },
+      "light": {
+        "name": "Light",
+        "value": "#f4f5f7"
+      },
+      "white": {
+        "name": "White",
+        "value": "#ffffff"
+      }
+    },
+    "typography": {
+      "heading-1": {
+        "fontFamily": "Inter",
+        "fontWeight": 800,
+        "fontSize": 56,
+        "lineHeight": 1.2
+      },
+      "heading-2": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 40,
+        "lineHeight": 1.3
+      },
+      "heading-3": {
+        "fontFamily": "Inter",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "lineHeight": 1.4
+      },
+      "body": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 1.6
+      },
+      "body-large": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 20,
+        "lineHeight": 1.6
+      }
+    },
+    "effects": {
+      "shadow-sm": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.08 },
+        "offset": { "x": 0, "y": 5 },
+        "radius": 20
+      },
+      "shadow-lg": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.15 },
+        "offset": { "x": 0, "y": 20 },
+        "radius": 60
+      },
+      "gradient-primary": {
+        "type": "GRADIENT_LINEAR",
+        "gradientHandlePositions": [
+          { "x": 0, "y": 0 },
+          { "x": 1, "y": 1 }
+        ],
+        "gradientStops": [
+          {
+            "position": 0,
+            "color": { "r": 0.4, "g": 0.494, "b": 0.918, "a": 1 }
+          },
+          {
+            "position": 1,
+            "color": { "r": 0.467, "g": 0.294, "b": 0.635, "a": 1 }
+          }
+        ]
+      }
+    }
+  },
+  "componentSets": {
+    "Button": {
+      "description": "Button component with variants",
+      "variants": {
+        "primary": {
+          "fills": [{
+            "type": "GRADIENT_LINEAR",
+            "gradientHandlePositions": [
+              { "x": 0, "y": 0.5 },
+              { "x": 1, "y": 0.5 }
+            ],
+            "gradientStops": [
+              { "position": 0, "color": { "r": 0.4, "g": 0.494, "b": 0.918, "a": 1 } },
+              { "position": 1, "color": { "r": 0.467, "g": 0.294, "b": 0.635, "a": 1 } }
+            ]
+          }],
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "cornerRadius": 8
+        },
+        "secondary": {
+          "fills": [],
+          "strokes": [{ 
+            "type": "SOLID", 
+            "color": { "r": 0.368, "g": 0.447, "b": 0.894, "a": 1 } 
+          }],
+          "strokeWeight": 2,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 16,
+          "paddingBottom": 16,
+          "cornerRadius": 8
+        }
+      }
+    }
+  }
+}

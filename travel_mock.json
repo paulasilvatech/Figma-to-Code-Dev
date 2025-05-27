@@ -1,0 +1,513 @@
+{
+  "platform": {
+    "name": "TravelWise",
+    "tagline": "Your Gateway to Amazing Adventures",
+    "logo": "✈️ TravelWise",
+    "description": "Discover breathtaking destinations around the world with our expertly curated travel packages and unforgettable experiences.",
+    "established": 2020,
+    "headquarters": "New York, NY",
+    "website": "https://travelwise.com",
+    "email": "hello@travelwise.com",
+    "phone": "+1 (555) 987-6543",
+    "social": {
+      "instagram": "https://instagram.com/travelwise",
+      "facebook": "https://facebook.com/travelwise",
+      "twitter": "https://twitter.com/travelwise",
+      "youtube": "https://youtube.com/travelwise",
+      "pinterest": "https://pinterest.com/travelwise"
+    },
+    "heroContent": {
+      "title": "Discover Your Next Adventure",
+      "subtitle": "Explore breathtaking destinations around the world with our expertly curated travel packages and unforgettable experiences.",
+      "ctaPrimary": "Explore Destinations",
+      "ctaSecondary": "Plan My Trip",
+      "backgroundImage": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop",
+      "features": [
+        "🌍 Global Destinations",
+        "💎 Best Price Guarantee", 
+        "🛡️ Safe & Secure Booking",
+        "⭐ Expert Local Guides"
+      ]
+    },
+    "popularDestinations": [
+      {
+        "id": "bali-indonesia",
+        "name": "Bali, Indonesia",
+        "country": "Indonesia",
+        "continent": "Asia",
+        "description": "Experience tropical paradise with stunning beaches, rich culture, and breathtaking rice terraces in the heart of Indonesia.",
+        "shortDescription": "Tropical paradise with stunning beaches and rich culture",
+        "image": "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1520637836862-4d197d17c886?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 899,
+          "currency": "USD",
+          "duration": "7 days"
+        },
+        "rating": 4.8,
+        "reviewCount": 1247,
+        "highlights": [
+          "Ubud Rice Terraces",
+          "Tanah Lot Temple",
+          "Seminyak Beach",
+          "Mount Batur Sunrise",
+          "Traditional Balinese Spa"
+        ],
+        "bestTime": "April - September",
+        "climate": "Tropical",
+        "activities": ["Beach", "Culture", "Adventure", "Relaxation"],
+        "packages": [
+          {
+            "id": "bali-luxury",
+            "name": "Luxury Bali Escape",
+            "duration": 7,
+            "price": 1299,
+            "includes": ["5-star accommodation", "Private transfers", "Guided tours", "Spa treatments"]
+          },
+          {
+            "id": "bali-adventure",
+            "name": "Bali Adventure Package",
+            "duration": 10,
+            "price": 1599,
+            "includes": ["Boutique hotels", "Volcano hiking", "White water rafting", "Cultural experiences"]
+          }
+        ]
+      },
+      {
+        "id": "paris-france",
+        "name": "Paris, France",
+        "country": "France",
+        "continent": "Europe",
+        "description": "The city of love awaits with iconic landmarks, world-class museums, and exquisite cuisine that will enchant your senses.",
+        "shortDescription": "The city of love with iconic landmarks and exquisite cuisine",
+        "image": "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1431274172761-fca41d930114?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 1299,
+          "currency": "USD",
+          "duration": "5 days"
+        },
+        "rating": 4.9,
+        "reviewCount": 2156,
+        "highlights": [
+          "Eiffel Tower",
+          "Louvre Museum",
+          "Notre-Dame Cathedral",
+          "Seine River Cruise",
+          "Montmartre District"
+        ],
+        "bestTime": "April - October",
+        "climate": "Temperate",
+        "activities": ["Culture", "Museums", "Food", "Romance"],
+        "packages": [
+          {
+            "id": "paris-romance",
+            "name": "Romantic Paris Getaway",
+            "duration": 5,
+            "price": 1699,
+            "includes": ["Luxury hotel", "Seine dinner cruise", "Champagne tasting", "Private city tour"]
+          },
+          {
+            "id": "paris-culture",
+            "name": "Cultural Paris Experience",
+            "duration": 7,
+            "price": 1899,
+            "includes": ["Boutique accommodation", "Museum passes", "Cooking class", "Art gallery tours"]
+          }
+        ]
+      },
+      {
+        "id": "tokyo-japan",
+        "name": "Tokyo, Japan",
+        "country": "Japan",
+        "continent": "Asia",
+        "description": "Immerse yourself in the perfect blend of ultramodern technology and ancient traditions in Japan's vibrant capital city.",
+        "shortDescription": "Modern technology meets ancient traditions",
+        "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 1599,
+          "currency": "USD",
+          "duration": "8 days"
+        },
+        "rating": 4.7,
+        "reviewCount": 1829,
+        "highlights": [
+          "Senso-ji Temple",
+          "Tokyo Skytree",
+          "Shibuya Crossing",
+          "Tsukiji Fish Market",
+          "Mount Fuji Day Trip"
+        ],
+        "bestTime": "March - May, September - November",
+        "climate": "Humid Subtropical",
+        "activities": ["Culture", "Technology", "Food", "Shopping"],
+        "packages": [
+          {
+            "id": "tokyo-modern",
+            "name": "Modern Tokyo Explorer",
+            "duration": 8,
+            "price": 2199,
+            "includes": ["Modern hotel", "Tech district tours", "Robot restaurant", "Anime experiences"]
+          },
+          {
+            "id": "tokyo-traditional",
+            "name": "Traditional Japan Journey",
+            "duration": 10,
+            "price": 2699,
+            "includes": ["Ryokan stays", "Tea ceremony", "Temple visits", "Traditional crafts"]
+          }
+        ]
+      },
+      {
+        "id": "santorini-greece",
+        "name": "Santorini, Greece",
+        "country": "Greece",
+        "continent": "Europe",
+        "description": "Witness the most spectacular sunsets in the world from this magical Greek island with its iconic white-washed buildings and crystal-clear waters.",
+        "shortDescription": "Magical Greek island with spectacular sunsets",
+        "image": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 1199,
+          "currency": "USD",
+          "duration": "6 days"
+        },
+        "rating": 4.9,
+        "reviewCount": 987,
+        "highlights": [
+          "Oia Sunset Views",
+          "Red Beach",
+          "Akrotiri Archaeological Site",
+          "Wine Tasting Tours",
+          "Volcanic Hot Springs"
+        ],
+        "bestTime": "April - October",
+        "climate": "Mediterranean",
+        "activities": ["Romance", "Beach", "Wine", "Photography"],
+        "packages": [
+          {
+            "id": "santorini-luxury",
+            "name": "Luxury Santorini Retreat",
+            "duration": 6,
+            "price": 2299,
+            "includes": ["Infinity pool suite", "Private yacht", "Wine tours", "Fine dining"]
+          }
+        ]
+      },
+      {
+        "id": "iceland-adventure",
+        "name": "Reykjavik, Iceland",
+        "country": "Iceland",
+        "continent": "Europe",
+        "description": "Discover the land of fire and ice with magnificent waterfalls, geysers, glaciers, and the magical Northern Lights.",
+        "shortDescription": "Land of fire and ice with Northern Lights",
+        "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 1799,
+          "currency": "USD",
+          "duration": "9 days"
+        },
+        "rating": 4.8,
+        "reviewCount": 654,
+        "highlights": [
+          "Blue Lagoon",
+          "Golden Circle",
+          "Northern Lights",
+          "Jokulsarlon Glacier",
+          "Geysir Hot Springs"
+        ],
+        "bestTime": "September - March (Northern Lights), June - August (Summer)",
+        "climate": "Subarctic",
+        "activities": ["Adventure", "Nature", "Photography", "Wellness"],
+        "packages": [
+          {
+            "id": "iceland-northern-lights",
+            "name": "Northern Lights Adventure",
+            "duration": 9,
+            "price": 2599,
+            "includes": ["4WD vehicle", "Northern Lights tours", "Ice cave exploration", "Blue Lagoon"]
+          }
+        ]
+      },
+      {
+        "id": "dubai-uae",
+        "name": "Dubai, UAE",
+        "country": "United Arab Emirates",
+        "continent": "Asia",
+        "description": "Experience luxury and innovation in this futuristic desert metropolis with world-class shopping, dining, and architecture.",
+        "shortDescription": "Futuristic desert metropolis with luxury experiences",
+        "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop",
+        "images": [
+          "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=1200&h=800&fit=crop",
+          "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&h=800&fit=crop"
+        ],
+        "price": {
+          "from": 1099,
+          "currency": "USD",
+          "duration": "5 days"
+        },
+        "rating": 4.6,
+        "reviewCount": 1432,
+        "highlights": [
+          "Burj Khalifa",
+          "Dubai Mall",
+          "Palm Jumeirah",
+          "Desert Safari",
+          "Dubai Marina"
+        ],
+        "bestTime": "November - March",
+        "climate": "Desert",
+        "activities": ["Luxury", "Shopping", "Adventure", "Architecture"],
+        "packages": [
+          {
+            "id": "dubai-luxury",
+            "name": "Dubai Luxury Experience",
+            "duration": 5,
+            "price": 1899,
+            "includes": ["5-star hotel", "Desert safari", "Burj Khalifa tickets", "Dubai Mall tours"]
+          }
+        ]
+      }
+    ],
+    "services": [
+      {
+        "id": "flight-booking",
+        "icon": "✈️",
+        "title": "Flight Booking",
+        "description": "Find and book the best flight deals from over 900 airlines worldwide with our advanced search technology.",
+        "features": [
+          "Real-time price comparison",
+          "Flexible date search",
+          "Multi-city bookings",
+          "Seat selection",
+          "Travel insurance options"
+        ]
+      },
+      {
+        "id": "hotel-reservations",
+        "icon": "🏨",
+        "title": "Hotel Reservations",
+        "description": "Choose from millions of accommodations worldwide, from budget hostels to luxury resorts.",
+        "features": [
+          "Verified reviews",
+          "Free cancellation options",
+          "Best price guarantee",
+          "Instant confirmation",
+          "24/7 customer support"
+        ]
+      },
+      {
+        "id": "travel-packages",
+        "icon": "🎒",
+        "title": "Travel Packages",
+        "description": "Complete vacation packages combining flights, hotels, and activities for the best value and convenience.",
+        "features": [
+          "Curated experiences",
+          "Local expert guides",
+          "Group discounts",
+          "Customizable itineraries",
+          "All-inclusive options"
+        ]
+      },
+      {
+        "id": "car-rentals",
+        "icon": "🚗",
+        "title": "Car Rentals",
+        "description": "Rent a car from trusted providers worldwide with competitive rates and comprehensive coverage.",
+        "features": [
+          "Wide vehicle selection",
+          "GPS navigation included",
+          "Fuel-efficient options",
+          "Airport pickup/drop-off",
+          "Additional driver options"
+        ]
+      },
+      {
+        "id": "activities-tours",
+        "icon": "🎯",
+        "title": "Activities & Tours",
+        "description": "Discover unique experiences and book tours, activities, and attractions at your destination.",
+        "features": [
+          "Skip-the-line tickets",
+          "Local guide expertise",
+          "Small group sizes",
+          "Cultural experiences",
+          "Adventure activities"
+        ]
+      },
+      {
+        "id": "travel-insurance",
+        "icon": "🛡️",
+        "title": "Travel Insurance",
+        "description": "Protect your trip with comprehensive travel insurance covering medical emergencies and trip cancellations.",
+        "features": [
+          "Medical coverage",
+          "Trip cancellation protection",
+          "Baggage loss coverage",
+          "24/7 emergency assistance",
+          "COVID-19 coverage"
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "name": "Emily Johnson",
+        "location": "New York, USA",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=100&h=100&fit=crop&crop=face",
+        "rating": 5,
+        "content": "TravelWise made our honeymoon to Bali absolutely perfect! The attention to detail and personalized service exceeded our expectations. Every moment was magical.",
+        "trip": "Bali Honeymoon Package",
+        "date": "2024-01-15"
+      },
+      {
+        "id": "testimonial-2",
+        "name": "Michael Chen",
+        "location": "San Francisco, USA",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+        "rating": 5,
+        "content": "The Tokyo adventure package was incredible! Our guide was knowledgeable and friendly, and every aspect of the trip was well-organized. Highly recommend!",
+        "trip": "Tokyo Cultural Experience",
+        "date": "2024-01-08"
+      },
+      {
+        "id": "testimonial-3",
+        "name": "Sarah Williams",
+        "location": "London, UK",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+        "rating": 5,
+        "content": "Paris was a dream come true! The romantic dinner cruise and private tours made it unforgettable. TravelWise truly understands what makes a trip special.",
+        "trip": "Romantic Paris Getaway",
+        "date": "2023-12-20"
+      },
+      {
+        "id": "testimonial-4",
+        "name": "David Martinez",
+        "location": "Madrid, Spain",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+        "rating": 5,
+        "content": "The Iceland Northern Lights tour was absolutely breathtaking! Seeing the aurora borealis was a once-in-a-lifetime experience. Perfect trip planning!",
+        "trip": "Iceland Northern Lights Adventure",
+        "date": "2023-11-28"
+      }
+    ],
+    "travelTips": [
+      {
+        "id": "tip-1",
+        "title": "Best Time to Book Flights",
+        "content": "Book domestic flights 1-3 months in advance and international flights 2-8 months ahead for the best deals.",
+        "category": "Booking Tips",
+        "image": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop"
+      },
+      {
+        "id": "tip-2",
+        "title": "Packing Essentials",
+        "content": "Pack versatile clothing, essential medications, and keep important documents in your carry-on. Roll clothes to save space.",
+        "category": "Packing",
+        "image": "https://images.unsplash.com/photo-1544441892-794166f1e3be?w=400&h=300&fit=crop"
+      },
+      {
+        "id": "tip-3",
+        "title": "Travel Safety Tips",
+        "content": "Research your destination, keep copies of important documents, and stay aware of your surroundings. Trust your instincts.",
+        "category": "Safety",
+        "image": "https://images.unsplash.com/photo-1521791055492-9440b7b0cd24?w=400&h=300&fit=crop"
+      }
+    ],
+    "stats": {
+      "happyCustomers": "500,000+",
+      "destinations": "200+",
+      "yearsExperience": "5+",
+      "teamMembers": "150+",
+      "customerSatisfaction": "98%",
+      "repeatCustomers": "78%"
+    }
+  },
+  "booking": {
+    "searchFilters": {
+      "destinations": ["All", "Asia", "Europe", "Americas", "Africa", "Oceania"],
+      "budget": ["Under $1000", "$1000-$2000", "$2000-$5000", "$5000+"],
+      "duration": ["1-3 days", "4-7 days", "1-2 weeks", "2+ weeks"],
+      "activities": ["Beach", "Culture", "Adventure", "Romance", "Family", "Business"],
+      "rating": [1, 2, 3, 4, 5]
+    },
+    "paymentMethods": [
+      "Credit Card",
+      "PayPal", 
+      "Bank Transfer",
+      "Apple Pay",
+      "Google Pay"
+    ],
+    "currencies": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD"]
+  },
+  "support": {
+    "channels": [
+      {
+        "type": "phone",
+        "label": "24/7 Phone Support",
+        "value": "+1 (555) 987-6543",
+        "availability": "24/7"
+      },
+      {
+        "type": "email",
+        "label": "Email Support",
+        "value": "support@travelwise.com",
+        "availability": "Response within 2 hours"
+      },
+      {
+        "type": "chat",
+        "label": "Live Chat",
+        "value": "Available on website",
+        "availability": "24/7"
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I cancel my booking?",
+        "answer": "You can cancel your booking through your account dashboard or by contacting our support team. Cancellation policies vary by supplier."
+      },
+      {
+        "question": "Is travel insurance recommended?",
+        "answer": "Yes, we highly recommend travel insurance to protect against unexpected events like medical emergencies or trip cancellations."
+      },
+      {
+        "question": "Can I modify my booking after confirmation?",
+        "answer": "Modifications are possible depending on the supplier's policy. Additional fees may apply. Contact our support team for assistance."
+      }
+    ]
+  },
+  "api": {
+    "baseUrl": "https://api.travelwise.com/v1",
+    "endpoints": {
+      "destinations": "/destinations",
+      "packages": "/packages",
+      "bookings": "/bookings",
+      "search": "/search",
+      "reviews": "/reviews",
+      "user": "/user"
+    }
+  }
+}

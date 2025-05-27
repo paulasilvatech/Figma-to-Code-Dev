@@ -1,0 +1,382 @@
+{
+  "dashboard": {
+    "name": "CloudSync Analytics",
+    "version": "2.1.0",
+    "user": {
+      "id": "user-123",
+      "name": "Alex Johnson",
+      "email": "alex@cloudsync.com",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      "role": "Admin",
+      "company": "CloudSync Inc.",
+      "timezone": "UTC-5",
+      "preferences": {
+        "theme": "light",
+        "dateFormat": "MM/DD/YYYY",
+        "currency": "USD"
+      }
+    },
+    "layout": {
+      "sidebar": {
+        "width": "260px",
+        "collapsedWidth": "80px",
+        "backgroundColor": "#1e293b",
+        "collapsed": false
+      },
+      "header": {
+        "height": "70px",
+        "backgroundColor": "#ffffff",
+        "showBreadcrumb": true
+      },
+      "content": {
+        "padding": "24px",
+        "backgroundColor": "#f8fafc"
+      }
+    },
+    "kpis": [
+      {
+        "id": "storage-used",
+        "title": "Storage Used",
+        "value": "2.4TB",
+        "numericValue": 2400,
+        "unit": "GB",
+        "change": 12.5,
+        "changeType": "increase",
+        "icon": "database",
+        "color": "#667eea",
+        "target": 5000,
+        "description": "Total cloud storage utilized across all accounts",
+        "lastUpdated": "2024-01-20T10:30:00Z"
+      },
+      {
+        "id": "active-users",
+        "title": "Active Users",
+        "value": "45,231",
+        "numericValue": 45231,
+        "unit": "users",
+        "change": 8.2,
+        "changeType": "increase",
+        "icon": "users",
+        "color": "#764ba2",
+        "target": 50000,
+        "description": "Monthly active users across all platforms",
+        "lastUpdated": "2024-01-20T10:28:00Z"
+      },
+      {
+        "id": "api-calls",
+        "title": "API Calls",
+        "value": "1.2M",
+        "numericValue": 1200000,
+        "unit": "calls",
+        "change": -2.1,
+        "changeType": "decrease",
+        "icon": "activity",
+        "color": "#f093fb",
+        "target": 1500000,
+        "description": "Total API requests processed this month",
+        "lastUpdated": "2024-01-20T10:25:00Z"
+      },
+      {
+        "id": "uptime",
+        "title": "System Uptime",
+        "value": "99.98%",
+        "numericValue": 99.98,
+        "unit": "percent",
+        "change": 0.05,
+        "changeType": "increase",
+        "icon": "check-circle",
+        "color": "#4facfe",
+        "target": 99.9,
+        "description": "Service availability over the last 30 days",
+        "lastUpdated": "2024-01-20T10:35:00Z"
+      },
+      {
+        "id": "revenue",
+        "title": "Monthly Revenue",
+        "value": "$127.5K",
+        "numericValue": 127500,
+        "unit": "USD",
+        "change": 15.3,
+        "changeType": "increase",
+        "icon": "dollar-sign",
+        "color": "#10b981",
+        "target": 150000,
+        "description": "Total revenue generated this month",
+        "lastUpdated": "2024-01-20T09:00:00Z"
+      },
+      {
+        "id": "support-tickets",
+        "title": "Support Tickets",
+        "value": "47",
+        "numericValue": 47,
+        "unit": "tickets",
+        "change": -18.2,
+        "changeType": "decrease",
+        "icon": "help-circle",
+        "color": "#f59e0b",
+        "target": 30,
+        "description": "Open support tickets requiring attention",
+        "lastUpdated": "2024-01-20T11:15:00Z"
+      }
+    ],
+    "charts": {
+      "revenue": {
+        "id": "revenue-chart",
+        "title": "Revenue Overview",
+        "type": "line",
+        "timeRange": "6M",
+        "dataKeys": ["revenue", "profit"],
+        "colors": ["#667eea", "#764ba2"],
+        "data": [
+          { "month": "Jul", "revenue": 98500, "profit": 32800, "date": "2023-07-01" },
+          { "month": "Aug", "revenue": 105200, "profit": 35700, "date": "2023-08-01" },
+          { "month": "Sep", "revenue": 112800, "profit": 41200, "date": "2023-09-01" },
+          { "month": "Oct", "revenue": 108900, "profit": 38500, "date": "2023-10-01" },
+          { "month": "Nov", "revenue": 118700, "profit": 44300, "date": "2023-11-01" },
+          { "month": "Dec", "revenue": 127500, "profit": 48900, "date": "2023-12-01" }
+        ]
+      },
+      "userActivity": {
+        "id": "user-activity-chart",
+        "title": "User Activity Trends",
+        "type": "area",
+        "timeRange": "30D",
+        "dataKey": "activeUsers",
+        "color": "#4facfe",
+        "data": [
+          { "date": "2024-01-01", "activeUsers": 42800, "newUsers": 1200, "returningUsers": 41600 },
+          { "date": "2024-01-02", "activeUsers": 43200, "newUsers": 1450, "returningUsers": 41750 },
+          { "date": "2024-01-03", "activeUsers": 41900, "newUsers": 980, "returningUsers": 40920 },
+          { "date": "2024-01-04", "activeUsers": 44100, "newUsers": 1680, "returningUsers": 42420 },
+          { "date": "2024-01-05", "activeUsers": 45600, "newUsers": 1890, "returningUsers": 43710 },
+          { "date": "2024-01-06", "activeUsers": 43800, "newUsers": 1340, "returningUsers": 42460 },
+          { "date": "2024-01-07", "activeUsers": 42100, "newUsers": 1120, "returningUsers": 40980 },
+          { "date": "2024-01-08", "activeUsers": 44900, "newUsers": 1750, "returningUsers": 43150 },
+          { "date": "2024-01-09", "activeUsers": 46200, "newUsers": 2100, "returningUsers": 44100 },
+          { "date": "2024-01-10", "activeUsers": 45231, "newUsers": 1850, "returningUsers": 43381 }
+        ]
+      },
+      "apiPerformance": {
+        "id": "api-performance-chart",
+        "title": "API Performance Metrics",
+        "type": "bar",
+        "timeRange": "7D",
+        "dataKeys": ["responseTime", "errorRate"],
+        "colors": ["#4facfe", "#f093fb"],
+        "data": [
+          { "day": "Mon", "responseTime": 245, "errorRate": 0.8, "requests": 180000 },
+          { "day": "Tue", "responseTime": 198, "errorRate": 0.5, "requests": 195000 },
+          { "day": "Wed", "responseTime": 212, "errorRate": 0.7, "requests": 188000 },
+          { "day": "Thu", "responseTime": 187, "errorRate": 0.3, "requests": 203000 },
+          { "day": "Fri", "responseTime": 234, "errorRate": 0.9, "requests": 178000 },
+          { "day": "Sat", "responseTime": 156, "errorRate": 0.2, "requests": 142000 },
+          { "day": "Sun", "responseTime": 189, "errorRate": 0.4, "requests": 158000 }
+        ]
+      },
+      "storageUsage": {
+        "id": "storage-usage-chart",
+        "title": "Storage Usage Distribution",
+        "type": "pie",
+        "data": [
+          { "name": "Documents", "value": 35, "color": "#667eea", "size": "840GB" },
+          { "name": "Images", "value": 28, "color": "#764ba2", "size": "672GB" },
+          { "name": "Videos", "value": 22, "color": "#f093fb", "size": "528GB" },
+          { "name": "Backups", "value": 10, "color": "#4facfe", "size": "240GB" },
+          { "name": "Other", "value": 5, "color": "#10b981", "size": "120GB" }
+        ]
+      }
+    },
+    "recentActivity": [
+      {
+        "id": "activity-1",
+        "type": "user_signup",
+        "user": "Emma Thompson",
+        "action": "New user registration",
+        "timestamp": "2024-01-20T11:45:00Z",
+        "details": "Premium plan selected",
+        "icon": "user-plus",
+        "color": "#10b981"
+      },
+      {
+        "id": "activity-2",
+        "type": "system_alert",
+        "user": "System",
+        "action": "High API usage detected",
+        "timestamp": "2024-01-20T11:30:00Z",
+        "details": "Threshold exceeded by 15%",
+        "icon": "alert-triangle",
+        "color": "#f59e0b"
+      },
+      {
+        "id": "activity-3",
+        "type": "payment",
+        "user": "TechCorp Ltd.",
+        "action": "Payment processed",
+        "timestamp": "2024-01-20T11:15:00Z",
+        "details": "$2,450.00 for Enterprise plan",
+        "icon": "credit-card",
+        "color": "#667eea"
+      },
+      {
+        "id": "activity-4",
+        "type": "backup",
+        "user": "System",
+        "action": "Scheduled backup completed", 
+        "timestamp": "2024-01-20T11:00:00Z",
+        "details": "2.1TB backed up successfully",
+        "icon": "database",
+        "color": "#4facfe"
+      },
+      {
+        "id": "activity-5",
+        "type": "integration",
+        "user": "DataFlow Inc.",
+        "action": "New API integration",
+        "timestamp": "2024-01-20T10:45:00Z",
+        "details": "Slack integration configured",
+        "icon": "link",
+        "color": "#764ba2"
+      }
+    ],
+    "topCustomers": [
+      {
+        "id": "customer-1",
+        "name": "TechCorp Ltd.",
+        "avatar": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=50&h=50&fit=crop",
+        "plan": "Enterprise",
+        "revenue": 24500,
+        "usage": 89,
+        "status": "active",
+        "joinDate": "2023-03-15"
+      },
+      {
+        "id": "customer-2", 
+        "name": "DataFlow Inc.",
+        "avatar": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=50&h=50&fit=crop",
+        "plan": "Professional",
+        "revenue": 12800,
+        "usage": 67,
+        "status": "active",
+        "joinDate": "2023-06-22"
+      },
+      {
+        "id": "customer-3",
+        "name": "CloudFirst Solutions",
+        "avatar": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=50&h=50&fit=crop",
+        "plan": "Professional",
+        "revenue": 9600,
+        "usage": 78,
+        "status": "active", 
+        "joinDate": "2023-08-10"
+      },
+      {
+        "id": "customer-4",
+        "name": "StartupHub",
+        "avatar": "https://images.unsplash.com/photo-1554774853-b415df9eeb92?w=50&h=50&fit=crop",
+        "plan": "Starter",
+        "revenue": 3600,
+        "usage": 45,
+        "status": "trial",
+        "joinDate": "2024-01-05"
+      }
+    ],
+    "systemStatus": {
+      "overall": "operational",
+      "services": [
+        {
+          "name": "API Gateway",
+          "status": "operational",
+          "uptime": 99.98,
+          "responseTime": 187
+        },
+        {
+          "name": "Database",
+          "status": "operational", 
+          "uptime": 99.95,
+          "responseTime": 12
+        },
+        {
+          "name": "File Storage",
+          "status": "operational",
+          "uptime": 99.99,
+          "responseTime": 89
+        },
+        {
+          "name": "CDN",
+          "status": "degraded",
+          "uptime": 99.2,
+          "responseTime": 245
+        },
+        {
+          "name": "Authentication",
+          "status": "operational",
+          "uptime": 99.97,
+          "responseTime": 156
+        }
+      ]
+    }
+  },
+  "notifications": [
+    {
+      "id": "notif-1",
+      "title": "System Maintenance Scheduled",
+      "message": "Scheduled maintenance window on Jan 25, 2024 from 2:00 AM - 4:00 AM UTC",
+      "type": "info",
+      "read": false,
+      "timestamp": "2024-01-20T09:30:00Z"
+    },
+    {
+      "id": "notif-2",
+      "title": "Storage Limit Warning",
+      "message": "Account approaching 80% storage capacity. Consider upgrading your plan.",
+      "type": "warning",
+      "read": false,
+      "timestamp": "2024-01-20T08:15:00Z"
+    },
+    {
+      "id": "notif-3",
+      "title": "New Feature Released",
+      "message": "Real-time collaboration tools are now available in your dashboard.",
+      "type": "success",
+      "read": true,
+      "timestamp": "2024-01-19T14:22:00Z"
+    }
+  ],
+  "settings": {
+    "general": {
+      "companyName": "CloudSync Inc.",
+      "timezone": "UTC-5",
+      "dateFormat": "MM/DD/YYYY",
+      "currency": "USD"
+    },
+    "dashboard": {
+      "autoRefresh": true,
+      "refreshInterval": 30,
+      "showAnimations": true,
+      "theme": "light"
+    },
+    "notifications": {
+      "email": true,
+      "push": true,
+      "sms": false,
+      "frequency": "real-time"
+    }
+  },
+  "api": {
+    "baseUrl": "https://api.cloudsync.com/v2",
+    "endpoints": {
+      "dashboard": "/dashboard",
+      "kpis": "/dashboard/kpis",
+      "charts": "/dashboard/charts",
+      "activity": "/dashboard/activity",
+      "customers": "/customers",
+      "notifications": "/notifications",
+      "settings": "/settings",
+      "websocket": "wss://ws.cloudsync.com/dashboard"
+    },
+    "rateLimit": {
+      "requests": 1000,
+      "window": "1h"
+    }
+  }
+}

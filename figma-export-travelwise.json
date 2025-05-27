@@ -1,0 +1,534 @@
+{
+  "document": {
+    "id": "0:1",
+    "name": "TravelWise - Travel Landing Page",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:2",
+        "name": "Desktop - 1440",
+        "type": "CANVAS",
+        "children": [
+          {
+            "id": "2:3",
+            "name": "Landing Page",
+            "type": "FRAME",
+            "absoluteBoundingBox": {
+              "x": 0,
+              "y": 0,
+              "width": 1440,
+              "height": 3600
+            },
+            "backgroundColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "children": [
+              {
+                "id": "3:4",
+                "name": "Header",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1440,
+                  "height": 80
+                },
+                "backgroundColor": {
+                  "r": 1,
+                  "g": 1,
+                  "b": 1,
+                  "a": 0.95
+                },
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "visible": true,
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.1
+                    },
+                    "blendMode": "NORMAL",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "radius": 4
+                  }
+                ],
+                "layoutMode": "HORIZONTAL",
+                "paddingLeft": 120,
+                "paddingRight": 120,
+                "paddingTop": 16,
+                "paddingBottom": 16,
+                "itemSpacing": 0,
+                "children": [
+                  {
+                    "id": "3:5",
+                    "name": "Logo",
+                    "type": "TEXT",
+                    "characters": "✈️ TravelWise",
+                    "style": {
+                      "fontFamily": "Inter",
+                      "fontWeight": 700,
+                      "fontSize": 24,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "color": {
+                            "r": 0.145,
+                            "g": 0.388,
+                            "b": 0.922,
+                            "a": 1
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "3:6",
+                    "name": "Navigation",
+                    "type": "FRAME",
+                    "layoutMode": "HORIZONTAL",
+                    "itemSpacing": 32,
+                    "children": [
+                      {
+                        "id": "3:7",
+                        "name": "Nav Item",
+                        "type": "TEXT",
+                        "characters": "Destinations",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 500,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 0.118,
+                                "g": 0.161,
+                                "b": 0.216,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "3:8",
+                    "name": "CTA Button",
+                    "type": "FRAME",
+                    "paddingLeft": 24,
+                    "paddingRight": 24,
+                    "paddingTop": 12,
+                    "paddingBottom": 12,
+                    "cornerRadius": 8,
+                    "fills": [
+                      {
+                        "type": "SOLID",
+                        "color": {
+                          "r": 0.145,
+                          "g": 0.388,
+                          "b": 0.922,
+                          "a": 1
+                        }
+                      }
+                    ],
+                    "children": [
+                      {
+                        "id": "3:9",
+                        "name": "Book Now",
+                        "type": "TEXT",
+                        "characters": "Book Now",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 600,
+                          "fontSize": 16,
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4:10",
+                "name": "Hero Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 80,
+                  "width": 1440,
+                  "height": 720
+                },
+                "fills": [
+                  {
+                    "type": "GRADIENT_LINEAR",
+                    "gradientHandlePositions": [
+                      { "x": 0, "y": 0.5 },
+                      { "x": 1, "y": 0.5 },
+                      { "x": 0, "y": 1 }
+                    ],
+                    "gradientStops": [
+                      {
+                        "position": 0,
+                        "color": {
+                          "r": 0.4,
+                          "g": 0.494,
+                          "b": 0.918,
+                          "a": 1
+                        }
+                      },
+                      {
+                        "position": 1,
+                        "color": {
+                          "r": 0.467,
+                          "g": 0.294,
+                          "b": 0.635,
+                          "a": 1
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "children": [
+                  {
+                    "id": "4:11",
+                    "name": "Hero Content",
+                    "type": "FRAME",
+                    "layoutMode": "VERTICAL",
+                    "itemSpacing": 24,
+                    "paddingLeft": 120,
+                    "paddingRight": 120,
+                    "paddingTop": 160,
+                    "children": [
+                      {
+                        "id": "4:12",
+                        "name": "Hero Title",
+                        "type": "TEXT",
+                        "characters": "Discover Your Next Adventure",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 800,
+                          "fontSize": 56,
+                          "lineHeight": {
+                            "value": 120,
+                            "unit": "PERCENT"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 1
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "4:13",
+                        "name": "Hero Subtitle",
+                        "type": "TEXT",
+                        "characters": "Explore breathtaking destinations around the world with our expertly curated travel packages and unforgettable experiences.",
+                        "style": {
+                          "fontFamily": "Inter",
+                          "fontWeight": 400,
+                          "fontSize": 20,
+                          "lineHeight": {
+                            "value": 160,
+                            "unit": "PERCENT"
+                          },
+                          "fills": [
+                            {
+                              "type": "SOLID",
+                              "color": {
+                                "r": 1,
+                                "g": 1,
+                                "b": 1,
+                                "a": 0.9
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "4:14",
+                        "name": "Hero Buttons",
+                        "type": "FRAME",
+                        "layoutMode": "HORIZONTAL",
+                        "itemSpacing": 16,
+                        "children": [
+                          {
+                            "id": "4:15",
+                            "name": "Primary Button",
+                            "type": "FRAME",
+                            "paddingLeft": 32,
+                            "paddingRight": 32,
+                            "paddingTop": 16,
+                            "paddingBottom": 16,
+                            "cornerRadius": 8,
+                            "fills": [
+                              {
+                                "type": "SOLID",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "id": "4:16",
+                            "name": "Secondary Button",
+                            "type": "FRAME",
+                            "paddingLeft": 32,
+                            "paddingRight": 32,
+                            "paddingTop": 16,
+                            "paddingBottom": 16,
+                            "cornerRadius": 8,
+                            "strokes": [
+                              {
+                                "type": "SOLID",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1
+                                }
+                              }
+                            ],
+                            "strokeWeight": 2
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "5:17",
+                "name": "Destinations Section",
+                "type": "FRAME",
+                "absoluteBoundingBox": {
+                  "x": 0,
+                  "y": 800,
+                  "width": 1440,
+                  "height": 800
+                },
+                "backgroundColor": {
+                  "r": 0.973,
+                  "g": 0.98,
+                  "b": 0.988,
+                  "a": 1
+                },
+                "paddingTop": 80,
+                "paddingBottom": 80,
+                "children": [
+                  {
+                    "id": "5:18",
+                    "name": "Destination Card",
+                    "type": "FRAME",
+                    "absoluteBoundingBox": {
+                      "x": 120,
+                      "y": 960,
+                      "width": 380,
+                      "height": 420
+                    },
+                    "backgroundColor": {
+                      "r": 1,
+                      "g": 1,
+                      "b": 1,
+                      "a": 1
+                    },
+                    "cornerRadius": 16,
+                    "effects": [
+                      {
+                        "type": "DROP_SHADOW",
+                        "visible": true,
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 0.1
+                        },
+                        "blendMode": "NORMAL",
+                        "offset": {
+                          "x": 0,
+                          "y": 20
+                        },
+                        "radius": 40
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "styles": {
+    "colors": {
+      "primary": {
+        "name": "Primary Blue",
+        "value": "#2563eb",
+        "description": "Main brand color for CTAs and highlights"
+      },
+      "secondary": {
+        "name": "Secondary Cyan",
+        "value": "#0ea5e9",
+        "description": "Supporting brand color"
+      },
+      "text-dark": {
+        "name": "Text Dark",
+        "value": "#1e293b",
+        "description": "Primary text color"
+      },
+      "text-light": {
+        "name": "Text Light",
+        "value": "#64748b",
+        "description": "Secondary text color"
+      },
+      "background": {
+        "name": "Background",
+        "value": "#ffffff",
+        "description": "Main background color"
+      },
+      "section-bg": {
+        "name": "Section Background",
+        "value": "#f8fafc",
+        "description": "Alternate section background"
+      }
+    },
+    "typography": {
+      "heading-1": {
+        "fontFamily": "Inter",
+        "fontWeight": 800,
+        "fontSize": 56,
+        "lineHeight": 1.2,
+        "letterSpacing": -0.02
+      },
+      "heading-2": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 40,
+        "lineHeight": 1.3,
+        "letterSpacing": -0.01
+      },
+      "heading-3": {
+        "fontFamily": "Inter",
+        "fontWeight": 600,
+        "fontSize": 24,
+        "lineHeight": 1.4
+      },
+      "body-large": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 20,
+        "lineHeight": 1.6
+      },
+      "body": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 1.6
+      },
+      "button": {
+        "fontFamily": "Inter",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeight": 1.5
+      }
+    },
+    "effects": {
+      "shadow-sm": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.1 },
+        "offset": { "x": 0, "y": 2 },
+        "radius": 4,
+        "spread": 0
+      },
+      "shadow-md": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.1 },
+        "offset": { "x": 0, "y": 4 },
+        "radius": 12,
+        "spread": 0
+      },
+      "shadow-lg": {
+        "type": "DROP_SHADOW",
+        "color": { "r": 0, "g": 0, "b": 0, "a": 0.1 },
+        "offset": { "x": 0, "y": 20 },
+        "radius": 40,
+        "spread": 0
+      }
+    }
+  },
+  "componentSets": {
+    "Button": {
+      "description": "Main button component with variants",
+      "variants": {
+        "primary": {
+          "fills": [{ 
+            "type": "SOLID", 
+            "color": { "r": 0.145, "g": 0.388, "b": 0.922, "a": 1 } 
+          }],
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "cornerRadius": 8
+        },
+        "secondary": {
+          "fills": [],
+          "strokes": [{ 
+            "type": "SOLID", 
+            "color": { "r": 0.145, "g": 0.388, "b": 0.922, "a": 1 } 
+          }],
+          "strokeWeight": 2,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 12,
+          "paddingBottom": 12,
+          "cornerRadius": 8
+        }
+      }
+    },
+    "Card": {
+      "description": "Content card component",
+      "properties": {
+        "backgroundColor": { "r": 1, "g": 1, "b": 1, "a": 1 },
+        "cornerRadius": 16,
+        "paddingAll": 24,
+        "effects": [{
+          "type": "DROP_SHADOW",
+          "color": { "r": 0, "g": 0, "b": 0, "a": 0.1 },
+          "offset": { "x": 0, "y": 20 },
+          "radius": 40
+        }]
+      }
+    }
+  }
+}

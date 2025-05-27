@@ -1,0 +1,178 @@
+{
+  "name": "design-to-code-workshop",
+  "version": "2.0.0",
+  "description": "Transform Figma designs into production-ready code using GitHub Copilot Agent Mode",
+  "main": "index.js",
+  "keywords": [
+    "figma",
+    "react",
+    "typescript",
+    "github-copilot",
+    "ai",
+    "design-to-code",
+    "workshop",
+    "frontend",
+    "ui-development"
+  ],
+  "author": "Design-to-Code Workshop Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/design-to-code-workshop/design-to-code-workshop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/design-to-code-workshop/design-to-code-workshop/issues"
+  },
+  "homepage": "https://design-to-code.dev",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "setup:verify": "node scripts/verify-setup.js",
+    "setup:all": "npm run setup && npm run install:all",
+    
+    "install:all": "npm run install:ecommerce && npm run install:saas && npm run install:agency && npm run install:travel",
+    "install:ecommerce": "cd scenario-1-ecommerce && npm install",
+    "install:saas": "cd scenario-2-saas && npm install", 
+    "install:agency": "cd scenario-3-agency && npm install",
+    "install:travel": "cd scenario-4-travel && npm install",
+    
+    "dev": "npm run dev:all",
+    "dev:all": "concurrently -p \"[{name}]\" -n \"ecomm,saas,agency,travel\" -c \"bgBlue,bgGreen,bgYellow,bgMagenta\" \"npm run dev:ecommerce\" \"npm run dev:saas\" \"npm run dev:agency\" \"npm run dev:travel\"",
+    "dev:ecommerce": "cd scenario-1-ecommerce && npm start",
+    "dev:saas": "cd scenario-2-saas && npm run dev",
+    "dev:agency": "cd scenario-3-agency && npm run develop",
+    "dev:travel": "cd scenario-4-travel && npm start",
+    
+    "build": "npm run build:all",
+    "build:all": "npm run build:ecommerce && npm run build:saas && npm run build:agency && npm run build:travel",
+    "build:ecommerce": "cd scenario-1-ecommerce && npm run build",
+    "build:saas": "cd scenario-2-saas && npm run build",
+    "build:agency": "cd scenario-3-agency && npm run build",
+    "build:travel": "cd scenario-4-travel && npm run build",
+    
+    "test": "npm run test:all",
+    "test:all": "npm run test:ecommerce && npm run test:saas && npm run test:agency && npm run test:travel",
+    "test:ecommerce": "cd scenario-1-ecommerce && npm test -- --watchAll=false",
+    "test:saas": "cd scenario-2-saas && npm test",
+    "test:agency": "cd scenario-3-agency && npm test",
+    "test:travel": "cd scenario-4-travel && npm test -- --watchAll=false",
+    "test:coverage": "npm run test:all -- --coverage",
+    
+    "lint": "npm run lint:all",
+    "lint:all": "npm run lint:ecommerce && npm run lint:saas && npm run lint:agency && npm run travel",
+    "lint:ecommerce": "cd scenario-1-ecommerce && npm run lint",
+    "lint:saas": "cd scenario-2-saas && npm run lint",
+    "lint:agency": "cd scenario-3-agency && npm run lint", 
+    "lint:travel": "cd scenario-4-travel && npm run lint",
+    "lint:fix": "npm run lint:all -- --fix",
+    
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    
+    "clean": "npm run clean:all",
+    "clean:all": "npm run clean:ecommerce && npm run clean:saas && npm run clean:agency && npm run clean:travel",
+    "clean:ecommerce": "cd scenario-1-ecommerce && rm -rf node_modules build",
+    "clean:saas": "cd scenario-2-saas && rm -rf node_modules .next",
+    "clean:agency": "cd scenario-3-agency && rm -rf node_modules .cache public",
+    "clean:travel": "cd scenario-4-travel && rm -rf node_modules build",
+    
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v && docker system prune -f",
+    
+    "lighthouse": "npm run lighthouse:all",
+    "lighthouse:all": "npm run lighthouse:ecommerce && npm run lighthouse:saas && npm run lighthouse:agency && npm run lighthouse:travel",
+    "lighthouse:ecommerce": "lighthouse http://localhost:3000 --output html --output-path ./reports/lighthouse-ecommerce.html",
+    "lighthouse:saas": "lighthouse http://localhost:3002 --output html --output-path ./reports/lighthouse-saas.html",
+    "lighthouse:agency": "lighthouse http://localhost:3003 --output html --output-path ./reports/lighthouse-agency.html",
+    "lighthouse:travel": "lighthouse http://localhost:3004 --output html --output-path ./reports/lighthouse-travel.html",
+    
+    "a11y": "npm run a11y:all",
+    "a11y:all": "npm run a11y:ecommerce && npm run a11y:saas && npm run a11y:agency && npm run a11y:travel",
+    "a11y:ecommerce": "axe http://localhost:3000 --exit",
+    "a11y:saas": "axe http://localhost:3002 --exit", 
+    "a11y:agency": "axe http://localhost:3003 --exit",
+    "a11y:travel": "axe http://localhost:3004 --exit",
+    
+    "analyze": "npm run analyze:all",
+    "analyze:all": "npm run analyze:ecommerce && npm run analyze:saas && npm run analyze:agency && npm run analyze:travel",
+    "analyze:ecommerce": "cd scenario-1-ecommerce && npm run analyze",
+    "analyze:saas": "cd scenario-2-saas && npm run analyze",
+    "analyze:agency": "cd scenario-3-agency && npm run analyze",
+    "analyze:travel": "cd scenario-4-travel && npm run analyze",
+    
+    "deploy": "npm run deploy:all",
+    "deploy:all": "npm run deploy:ecommerce && npm run deploy:saas && npm run deploy:agency && npm run deploy:travel",
+    "deploy:ecommerce": "cd scenario-1-ecommerce && npm run deploy",
+    "deploy:saas": "cd scenario-2-saas && npm run deploy",
+    "deploy:agency": "cd scenario-3-agency && npm run deploy",
+    "deploy:travel": "cd scenario-4-travel && npm run deploy",
+    
+    "update:dependencies": "npm update && npm run update:all",
+    "update:all": "npm run update:ecommerce && npm run update:saas && npm run update:agency && npm run update:travel",
+    "update:ecommerce": "cd scenario-1-ecommerce && npm update",
+    "update:saas": "cd scenario-2-saas && npm update",
+    "update:agency": "cd scenario-3-agency && npm update",
+    "update:travel": "cd scenario-4-travel && npm update",
+    
+    "security:audit": "npm audit && npm run security:audit:all",
+    "security:audit:all": "npm run security:audit:ecommerce && npm run security:audit:saas && npm run security:audit:agency && npm run security:audit:travel",
+    "security:audit:ecommerce": "cd scenario-1-ecommerce && npm audit",
+    "security:audit:saas": "cd scenario-2-saas && npm audit",
+    "security:audit:agency": "cd scenario-3-agency && npm audit",
+    "security:audit:travel": "cd scenario-4-travel && npm audit",
+    
+    "version": "echo $npm_package_version",
+    "version:scenarios": "node scripts/sync-versions.js",
+    
+    "postinstall": "npm run setup:verify",
+    "precommit": "npm run lint && npm run test",
+    "prepush": "npm run build && npm run test:coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0",
+    "lighthouse": "^10.0.0",
+    "@axe-core/cli": "^4.6.0",
+    "webpack-bundle-analyzer": "^4.8.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.0",
+    "ora": "^5.4.1",
+    "semver": "^7.5.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:all"
+    }
+  },
+  "workspaces": [
+    "scenario-1-ecommerce",
+    "scenario-2-saas", 
+    "scenario-3-agency",
+    "scenario-4-travel",
+    "shared-services/*"
+  ]
+}

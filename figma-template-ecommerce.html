@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Template - E-commerce Product Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #e5e5e5;
+            color: #1a1a1a;
+        }
+
+        /* Figma Frame */
+        .figma-frame {
+            max-width: 1440px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Frame Header */
+        .frame-header {
+            background: #2c2c2c;
+            color: white;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .frame-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .device-selector {
+            display: flex;
+            gap: 8px;
+        }
+
+        .device-btn {
+            padding: 6px 12px;
+            background: #3a3a3a;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .device-btn.active {
+            background: #667eea;
+        }
+
+        /* Grid Overlay */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 7px, rgba(255,0,255,0.1) 8px),
+                repeating-linear-gradient(90deg, transparent, transparent 7px, rgba(255,0,255,0.1) 8px);
+            background-size: 8px 8px;
+            display: none;
+        }
+
+        .show-grid .grid-overlay {
+            display: block;
+        }
+
+        /* E-commerce Layout */
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: #1a1a1a;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ef4444;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Product Section */
+        .product-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            display: grid;
+            gap: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .thumb {
+            width: 100px;
+            height: 100px;
+            background: #e0e7ff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .thumb:hover {
+            border-color: #6366f1;
+        }
+
+        .thumb.active {
+            border-color: #6366f1;
+        }
+
+        /* Product Info */
+        .product-info {
+            padding-top: 20px;
+        }
+
+        .product-brand {
+            font-size: 14px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 20px;
+        }
+
+        .rating-info {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .current-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .original-price {
+            font-size: 24px;
+            color: #9ca3af;
+            text-decoration: line-through;
+        }
+
+        .discount-badge {
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .product-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4b5563;
+            margin-bottom: 32px;
+        }
+
+        /* Variant Selectors */
+        .variant-section {
+            margin-bottom: 32px;
+        }
+
+        .variant-label {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .size-guide {
+            font-size: 14px;
+            color: #6366f1;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .size-btn {
+            width: 48px;
+            height: 48px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .size-btn:hover {
+            border-color: #6366f1;
+        }
+
+        .size-btn.active {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
+        }
+
+        .size-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            position: relative;
+        }
+
+        .size-btn.disabled::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -2px;
+            right: -2px;
+            height: 2px;
+            background: #e5e7eb;
+            transform: rotate(-45deg);
+        }
+
+        .color-options {
+            display: flex;
+            gap: 12px;
+        }
+
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .color-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .color-btn.active {
+            border-color: #1a1a1a;
+        }
+
+        /* Add to Cart Section */
+        .cart-section {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .quantity-input {
+            display: flex;
+            align-items: center;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            width: 48px;
+            height: 48px;
+            border: none;
+            background: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: #f3f4f6;
+        }
+
+        .qty-value {
+            width: 60px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .add-to-cart-btn {
+            flex: 1;
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #000;
+        }
+
+        .wishlist-btn {
+            width: 52px;
+            height: 52px;
+            border: 2px solid #e5e7eb;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .wishlist-btn:hover {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .feature-text h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Tabs Section */
+        .tabs-section {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+        }
+
+        .tabs-nav {
+            display: flex;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 32px;
+        }
+
+        .tab-btn {
+            padding: 16px 32px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #6b7280;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: #1a1a1a;
+        }
+
+        .tab-btn.active {
+            color: #1a1a1a;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a1a1a;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .review-card {
+            background: #f9fafb;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            background: #e0e7ff;
+            border-radius: 50%;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+        }
+
+        .review-date {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .review-rating {
+            color: #fbbf24;
+        }
+
+        .review-text {
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        /* Related Products */
+        .related-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            background: #f9fafb;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 280px;
+            background: #e0e7ff;
+        }
+
+        .product-details {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        /* Annotations */
+        .design-annotation {
+            position: absolute;
+            background: #6366f1;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .annotation-line {
+            position: absolute;
+            width: 1px;
+            background: #6366f1;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+    <!-- Figma Frame -->
+    <div class="figma-frame">
+        <!-- Frame Header -->
+        <div class="frame-header">
+            <div class="frame-title">
+                <span>🛍️</span>
+                <span>E-commerce Product Page - Desktop (1440px)</span>
+            </div>
+            <div class="device-selector">
+                <button class="device-btn active">Desktop</button>
+                <button class="device-btn">Tablet</button>
+                <button class="device-btn">Mobile</button>
+                <button class="device-btn" onclick="document.querySelector('.figma-frame').classList.toggle('show-grid')">Grid</button>
+            </div>
+        </div>
+
+        <!-- Grid Overlay -->
+        <div class="grid-overlay"></div>
+
+        <!-- Design Annotations -->
+        <div class="design-annotation" style="top: 100px; left: 50px;">Container: 1200px max-width</div>
+        <div class="design-annotation" style="top: 300px; right: 50px;">Grid: 12 columns, 24px gap</div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">STORE</div>
+                <ul class="nav-menu">
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="icon-btn">🔍</div>
+                    <div class="icon-btn">👤</div>
+                    <div class="icon-btn">
+                        🛍️
+                        <span class="cart-badge">3</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Home</a>
+            <span>/</span>
+            <a href="#">Men</a>
+            <span>/</span>
+            <a href="#">Sneakers</a>
+            <span>/</span>
+            <span>Air Max 270</span>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-section">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image"></div>
+                <div class="image-nav">
+                    <div class="thumb active"></div>
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <div class="product-brand">NIKE</div>
+                <h1 class="product-title">Air Max 270 React</h1>
+                
+                <div class="product-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-info">4.5 (234 reviews)</span>
+                </div>
+
+                <div class="price-section">
+                    <span class="current-price">$129.99</span>
+                    <span class="original-price">$179.99</span>
+                    <span class="discount-badge">-28%</span>
+                </div>
+
+                <p class="product-desc">
+                    The Nike Air Max 270 React brings you a comfortable ride with bold style. 
+                    The design draws inspiration from art movements and digital culture to 
+                    create a look that's both retro and futuristic.
+                </p>
+
+                <!-- Size Selection -->
+                <div class="variant-section">
+                    <div class="variant-label">
+                        <span>Select Size</span>
+                        <span class="size-guide">Size Guide</span>
+                    </div>
+                    <div class="size-options">
+                        <button class="size-btn">7</button>
+                        <button class="size-btn">7.5</button>
+                        <button class="size-btn">8</button>
+                        <button class="size-btn active">8.5</button>
+                        <button class="size-btn">9</button>
+                        <button class="size-btn disabled">9.5</button>
+                        <button class="size-btn">10</button>
+                        <button class="size-btn">10.5</button>
+                    </div>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="variant-section">
+                    <div class="variant-label">Color: Black/White</div>
+                    <div class="color-options">
+                        <button class="color-btn active" style="background: #1a1a1a;"></button>
+                        <button class="color-btn" style="background: #ef4444;"></button>
+                        <button class="color-btn" style="background: #3b82f6;"></button>
+                        <button class="color-btn" style="background: #10b981;"></button>
+                    </div>
+                </div>
+
+                <!-- Add to Cart -->
+                <div class="cart-section">
+                    <div class="quantity-input">
+                        <button class="qty-btn">-</button>
+                        <span class="qty-value">1</span>
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <span>🛒</span>
+                        <span>Add to Cart</span>
+                    </button>
+                    <button class="wishlist-btn">❤️</button>
+                </div>
+
+                <!-- Features -->
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <div class="feature-text">
+                            <h4>Free Shipping</h4>
+                            <p>On orders over $100</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">↩️</div>
+                        <div class="feature-text">
+                            <h4>Easy Returns</h4>
+                            <p>30-day return policy</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h4>Secure Payment</h4>
+                            <p>100% secure checkout</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active">Description</button>
+                <button class="tab-btn">Specifications</button>
+                <button class="tab-btn">Reviews (234)</button>
+            </div>
+
+            <div class="tab-content active">
+                <h3 style="margin-bottom: 16px;">Product Details</h3>
+                <p style="line-height: 1.8; color: #4b5563;">
+                    The Nike Air Max 270 React blends design cues from the Air Max lineage with 
+                    Nike React foam for an ultra-comfortable ride. The large Air unit provides 
+                    exceptional cushioning, while the React foam offers a smooth, responsive feel.
+                </p>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-section">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"></div>
+                    <div class="product-details">
+                        <h3 class="product-name">Air Force 1</h3>
+                        <p class="product-price">$109.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background: #fef3c7;"></div>
+                    <div class="product-details">
+                        <h3 class="product-name">React Vision</h3>
+                        <p class="product-price">$139.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background: #dbeafe;"></div>
+                    <div class="product-details">
+                        <h3 class="product-name">Blazer Mid</h3>
+                        <p class="product-price">$99.99</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img" style="background: #d1fae5;"></div>
+                    <div class="product-details">
+                        <h3 class="product-name">Zoom Pegasus</h3>
+                        <p class="product-price">$129.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

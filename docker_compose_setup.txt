@@ -1,0 +1,393 @@
+# =============================================================================
+# Design-to-Code Workshop - Docker Compose Configuration
+# =============================================================================
+# This file sets up all 4 workshop scenarios in containers for easy development
+# Usage:
+#   docker-compose up                    # Start all scenarios
+#   docker-compose up ecommerce         # Start only e-commerce
+#   docker-compose up saas dashboard    # Start SaaS with services
+#   docker-compose down                  # Stop all services
+# =============================================================================
+
+version: '3.8'
+
+# =============================================================================
+# SERVICES DEFINITION
+# =============================================================================
+services:
+  
+  # ---------------------------------------------------------------------------
+  # SCENARIO 1: E-COMMERCE PRODUCT PAGE (Nike Air Max)
+  # ---------------------------------------------------------------------------
+  ecommerce:
+    build:
+      context: ./scenario-1-ecommerce
+      dockerfile: Dockerfile
+    container_name: workshop-ecommerce
+    ports:
+      - "3000:3000"    # Main React app
+    volumes:
+      # Hot reload - mount source code
+      - ./scenario-1-ecommerce/src:/app/src
+      - ./scenario-1-ecommerce/public:/app/public
+      - ./scenario-1-ecommerce/package.json:/app/package.json
+      # Avoid mounting node_modules (performance)
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_ENV=development
+      - REACT_APP_STRIPE_PUBLIC_KEY=${STRIPE_PUBLIC_KEY:-pk_test_demo}
+      - REACT_APP_API_URL=http://localhost:3001/api
+      - REACT_APP_WEBSOCKET_URL=ws://localhost:3001/ws
+      - CHOKIDAR_USEPOLLING=true    # For file watching in containers
+      - WATCHPACK_POLLING=true
+    networks:
+      - workshop-network
+    depends_on:
+      - ecommerce-api
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # E-commerce API Backend (Mock)
+  ecommerce-api:
+    build:
+      context: ./shared-services/ecommerce-api
+      dockerfile: Dockerfile
+    container_name: workshop-ecommerce-api
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY:-sk_test_demo}
+      - DATABASE_URL=sqlite:///tmp/ecommerce.db
+    volumes:
+      - ./shared-services/ecommerce-api:/app
+      - /app/node_modules
+    networks:
+      - workshop-network
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # SCENARIO 2: SAAS DASHBOARD (CloudSync Analytics)
+  # ---------------------------------------------------------------------------
+  saas:
+    build:
+      context: ./scenario-2-saas
+      dockerfile: Dockerfile
+    container_name: workshop-saas
+    ports:
+      - "3002:3000"    # Next.js app
+    volumes:
+      - ./scenario-2-saas:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_WS_URL=ws://localhost:3012/ws
+      - NEXT_PUBLIC_API_URL=http://localhost:3012/api
+      - DATABASE_URL=postgresql://postgres:workshop@postgres:5432/cloudsync
+      - REDIS_URL=redis://redis:6379
+    networks:
+      - workshop-network
+    depends_on:
+      - saas-api
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  # SaaS API Backend with WebSocket
+  saas-api:
+    build:
+      context: ./shared-services/saas-api
+      dockerfile: Dockerfile
+    container_name: workshop-saas-api
+    ports:
+      - "3012:3012"    # API + WebSocket server
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgresql://postgres:workshop@postgres:5432/cloudsync
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=workshop-jwt-secret-key
+    volumes:
+      - ./shared-services/saas-api:/app
+      - /app/node_modules
+    networks:
+      - workshop-network
+    depends_on:
+      - postgres
+      - redis
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # SCENARIO 3: AGENCY PORTFOLIO (Nexus Creative)
+  # ---------------------------------------------------------------------------
+  agency:
+    build:
+      context: ./scenario-3-agency
+      dockerfile: Dockerfile
+    container_name: workshop-agency
+    ports:
+      - "3003:3000"    # Gatsby development server
+    volumes:
+      - ./scenario-3-agency:/app
+      - /app/node_modules
+      - /app/.cache
+      - /app/public
+    environment:
+      - NODE_ENV=development
+      - GATSBY_ENV=development
+      - GATSBY_CONTACT_API_URL=http://localhost:3013/api/contact
+      - GATSBY_RECAPTCHA_SITE_KEY=${RECAPTCHA_SITE_KEY:-demo_key}
+    networks:
+      - workshop-network
+    depends_on:
+      - agency-api
+    restart: unless-stopped
+
+  # Agency API for contact forms
+  agency-api:
+    build:
+      context: ./shared-services/agency-api
+      dockerfile: Dockerfile
+    container_name: workshop-agency-api
+    ports:
+      - "3013:3013"
+    environment:
+      - NODE_ENV=development
+      - EMAIL_SERVICE=${EMAIL_SERVICE:-console}
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY:-demo}
+      - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY:-demo}
+    volumes:
+      - ./shared-services/agency-api:/app
+      - /app/node_modules
+    networks:
+      - workshop-network
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # SCENARIO 4: TRAVEL PLATFORM (TravelWise Adventures)
+  # ---------------------------------------------------------------------------
+  travel:
+    build:
+      context: ./scenario-4-travel
+      dockerfile: Dockerfile
+    container_name: workshop-travel
+    ports:
+      - "3004:3000"    # React app
+    volumes:
+      - ./scenario-4-travel:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_MAPBOX_TOKEN=${MAPBOX_TOKEN:-demo_token}
+      - REACT_APP_GOOGLE_PLACES_KEY=${GOOGLE_PLACES_KEY:-demo_key}
+      - REACT_APP_API_URL=http://localhost:3014/api
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - workshop-network
+    depends_on:
+      - travel-api
+    restart: unless-stopped
+
+  # Travel API Backend
+  travel-api:
+    build:
+      context: ./shared-services/travel-api
+      dockerfile: Dockerfile
+    container_name: workshop-travel-api
+    ports:
+      - "3014:3014"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URL=mongodb://mongo:27017/travelwise
+      - MAPBOX_SECRET_TOKEN=${MAPBOX_SECRET_TOKEN:-demo}
+      - WEATHER_API_KEY=${WEATHER_API_KEY:-demo}
+    volumes:
+      - ./shared-services/travel-api:/app
+      - /app/node_modules
+    networks:
+      - workshop-network
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # SHARED SERVICES & DATABASES
+  # ---------------------------------------------------------------------------
+  
+  # PostgreSQL for SaaS Dashboard
+  postgres:
+    image: postgres:15-alpine
+    container_name: workshop-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=cloudsync
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=workshop
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./shared-services/postgres/init:/docker-entrypoint-initdb.d
+    networks:
+      - workshop-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    container_name: workshop-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - workshop-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # MongoDB for Travel Platform
+  mongo:
+    image: mongo:6
+    container_name: workshop-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=travelwise
+    volumes:
+      - mongo_data:/data/db
+      - ./shared-services/mongo/init:/docker-entrypoint-initdb.d
+    networks:
+      - workshop-network
+    restart: unless-stopped
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/travelwise --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # ---------------------------------------------------------------------------
+  # DEVELOPMENT TOOLS & UTILITIES
+  # ---------------------------------------------------------------------------
+  
+  # Nginx reverse proxy (optional - for production-like setup)
+  nginx:
+    image: nginx:alpine
+    container_name: workshop-nginx
+    ports:
+      - "80:80"      # Main entry point
+      - "443:443"    # HTTPS (with self-signed certs)
+    volumes:
+      - ./shared-services/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./shared-services/nginx/ssl:/etc/nginx/ssl
+    networks:
+      - workshop-network
+    depends_on:
+      - ecommerce
+      - saas
+      - agency
+      - travel
+    restart: unless-stopped
+    profiles:
+      - production
+
+  # Mailhog for email testing
+  mailhog:
+    image: mailhog/mailhog
+    container_name: workshop-mailhog
+    ports:
+      - "1025:1025"    # SMTP
+      - "8025:8025"    # Web UI
+    networks:
+      - workshop-network
+    restart: unless-stopped
+    profiles:
+      - development
+
+  # Adminer for database management
+  adminer:
+    image: adminer
+    container_name: workshop-adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - workshop-network
+    restart: unless-stopped
+    profiles:
+      - development
+
+  # Redis Commander for Redis management
+  redis-commander:
+    image: rediscommander/redis-commander
+    container_name: workshop-redis-commander
+    ports:
+      - "8081:8081"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    networks:
+      - workshop-network
+    depends_on:
+      - redis
+    restart: unless-stopped
+    profiles:
+      - development
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+networks:
+  workshop-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  mongo_data:
+    driver: local
+  node_modules_ecommerce:
+    driver: local
+  node_modules_saas:
+    driver: local
+  node_modules_agency:
+    driver: local
+  node_modules_travel:
+    driver: local
+
+# =============================================================================
+# DOCKER COMPOSE PROFILES
+# =============================================================================
+# Usage examples:
+#
+# Development (with dev tools):
+#   docker-compose --profile development up
+#
+# Production (with nginx):
+#   docker-compose --profile production up
+#
+# Individual scenarios:
+#   docker-compose up ecommerce ecommerce-api
+#   docker-compose up saas saas-api postgres redis
+#   docker-compose up agency agency-api
+#   docker-compose up travel travel-api mongo
+#
+# =============================================================================
