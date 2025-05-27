@@ -684,4 +684,4 @@ Use React Testing Library with Jest. Include setup for mocking intersection obse
 
 **🎯 Remember: Great prompts lead to great code. Be specific, provide context, and iterate!**
 
-[🏠 Main README](README.md) | [🛠️ Setup Guide](SETUP.md) | [💬 Get Help](https://discord.gg/design-to-code)
+[🏠 Home](README.md) | [🛠️ Setup Guide](workshop_setup_guide.md) |
