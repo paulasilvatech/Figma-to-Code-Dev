@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Clock, Users, Zap, Check, ExternalLink, Star, Book, Code, Cpu, ArrowRight, Menu, X, ShoppingBag, BarChart3, Palette, Plane, Package, Timer } from 'lucide-react';
+import { ChevronRight, Clock, Users, Zap, Check, ExternalLink, Star, Book, Code, Menu, X, ShoppingBag, BarChart3, Palette, Plane, Package, Timer, FileText, Globe, Smartphone, Database, Shield, Layers } from 'lucide-react';
 
 // Custom Figma to Code Logo
 const FigmaToCodeLogo = ({ className = "w-12 h-12" }) => {
@@ -49,6 +49,7 @@ const FigmaToCodeLogo = ({ className = "w-12 h-12" }) => {
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [selectedScenario, setSelectedScenario] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,28 +65,96 @@ const LandingPage = () => {
       title: "E-commerce Product Page", 
       icon: ShoppingBag,
       time: "35+ hours → 2 hours",
-      features: ["Interactive gallery", "Cart animations", "Reviews system", "Inventory tracking"]
+      features: ["Interactive gallery", "Cart animations", "Reviews system", "Inventory tracking"],
+      description: "Build a complete e-commerce product page with advanced functionality including dynamic image galleries, real-time inventory updates, and sophisticated cart management.",
+      technologies: ["React", "Redux Toolkit", "Stripe API", "React Query"],
+      learningObjectives: [
+        "Implement complex state management for shopping cart",
+        "Build responsive image galleries with zoom functionality",
+        "Integrate payment processing with Stripe",
+        "Create real-time inventory tracking system",
+        "Develop advanced product filtering and search"
+      ],
+      deliverables: [
+        "Fully functional product page",
+        "Shopping cart with persistence",
+        "Payment integration",
+        "Admin inventory dashboard"
+      ],
+      difficulty: "Intermediate",
+      duration: "2 hours"
     },
     { 
       id: 2, 
       title: "SaaS Dashboard", 
       icon: BarChart3,
       time: "49+ hours → 3 hours",
-      features: ["Real-time charts", "WebSocket updates", "Drag-drop widgets", "Theme switching"]
+      features: ["Real-time charts", "WebSocket updates", "Drag-drop widgets", "Theme switching"],
+      description: "Create a comprehensive SaaS dashboard with real-time data visualization, customizable widgets, and advanced user management features.",
+      technologies: ["React", "D3.js", "Socket.io", "React Beautiful DnD"],
+      learningObjectives: [
+        "Build real-time data visualization with WebSockets",
+        "Implement drag-and-drop dashboard customization",
+        "Create responsive charts and graphs",
+        "Develop theme switching functionality",
+        "Build user role management system"
+      ],
+      deliverables: [
+        "Interactive dashboard with live data",
+        "Customizable widget system",
+        "User management panel",
+        "Analytics reporting tools"
+      ],
+      difficulty: "Advanced",
+      duration: "3 hours"
     },
     { 
       id: 3, 
       title: "Agency Portfolio", 
       icon: Palette,
       time: "37+ hours → 2.5 hours",
-      features: ["Parallax effects", "Custom cursor", "Smooth animations", "Contact forms"]
+      features: ["Parallax effects", "Custom cursor", "Smooth animations", "Contact forms"],
+      description: "Design and develop a stunning agency portfolio website with advanced animations, custom interactions, and sophisticated visual effects.",
+      technologies: ["React", "Framer Motion", "GSAP", "EmailJS"],
+      learningObjectives: [
+        "Create complex CSS animations and transitions",
+        "Implement parallax scrolling effects",
+        "Build custom cursor interactions",
+        "Develop smooth page transitions",
+        "Create engaging contact forms with validation"
+      ],
+      deliverables: [
+        "Fully animated portfolio website",
+        "Project showcase with case studies",
+        "Interactive contact system",
+        "Mobile-optimized experience"
+      ],
+      difficulty: "Intermediate",
+      duration: "2.5 hours"
     },
     { 
       id: 4, 
       title: "Travel Platform", 
       icon: Plane,
       time: "54+ hours → 3.5 hours",
-      features: ["Smart search", "Map integration", "Date pickers", "Multi-language"]
+      features: ["Smart search", "Map integration", "Date pickers", "Multi-language"],
+      description: "Develop a comprehensive travel booking platform with intelligent search capabilities, interactive maps, and multi-language support.",
+      technologies: ["React", "Mapbox GL", "React Datepicker", "i18next"],
+      learningObjectives: [
+        "Integrate interactive mapping solutions",
+        "Build advanced search and filtering systems",
+        "Implement date range selection",
+        "Create multi-language support",
+        "Develop booking flow with validation"
+      ],
+      deliverables: [
+        "Complete travel booking platform",
+        "Interactive map with location search",
+        "Multi-language interface",
+        "Booking management system"
+      ],
+      difficulty: "Advanced",
+      duration: "3.5 hours"
     }
   ];
 
@@ -259,7 +328,11 @@ const LandingPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {scenarios.map((scenario) => (
-              <div key={scenario.id} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-gray-800/70 transition-all">
+              <div 
+                key={scenario.id} 
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-gray-800/70 transition-all cursor-pointer transform hover:scale-105"
+                onClick={() => setSelectedScenario(scenario)}
+              >
                 <div className="flex items-start justify-between mb-4">
                   <scenario.icon className="w-12 h-12 text-yellow-400" />
                   <span className="text-sm font-medium text-amber-300 bg-amber-900/30 px-3 py-1 rounded-full">
@@ -267,7 +340,7 @@ const LandingPage = () => {
                   </span>
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">{scenario.title}</h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-4">
                   {scenario.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2 text-gray-300">
                       <Check className="w-4 h-4 text-yellow-400 flex-shrink-0" />
@@ -275,11 +348,147 @@ const LandingPage = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-400">Click for details</span>
+                  <ChevronRight className="w-5 h-5 text-yellow-400" />
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Scenario Detail Modal */}
+      {selectedScenario && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="sticky top-0 bg-gray-900 p-6 border-b border-gray-700 flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <selectedScenario.icon className="w-8 h-8 text-yellow-400" />
+                <h2 className="text-2xl font-bold">{selectedScenario.title}</h2>
+              </div>
+              <button 
+                onClick={() => setSelectedScenario(null)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            <div className="p-6">
+              {/* Overview */}
+              <div className="mb-8">
+                <div className="flex flex-wrap gap-4 mb-4">
+                  <span className="bg-yellow-600/20 text-yellow-300 px-3 py-1 rounded-full text-sm">
+                    {selectedScenario.difficulty}
+                  </span>
+                  <span className="bg-amber-600/20 text-amber-300 px-3 py-1 rounded-full text-sm">
+                    {selectedScenario.duration}
+                  </span>
+                  <span className="bg-green-600/20 text-green-300 px-3 py-1 rounded-full text-sm">
+                    {selectedScenario.time}
+                  </span>
+                </div>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  {selectedScenario.description}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Technologies */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center">
+                    <Code className="w-5 h-5 mr-2 text-yellow-400" />
+                    Technologies Used
+                  </h3>
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <div className="flex flex-wrap gap-2">
+                      {selectedScenario.technologies.map((tech, idx) => (
+                        <span key={idx} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Learning Objectives */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center">
+                    <Zap className="w-5 h-5 mr-2 text-yellow-400" />
+                    Learning Objectives
+                  </h3>
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <ul className="space-y-2">
+                      {selectedScenario.learningObjectives.map((objective, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
+                          <Check className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{objective}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Deliverables */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center">
+                    <Package className="w-5 h-5 mr-2 text-yellow-400" />
+                    Deliverables
+                  </h3>
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <ul className="space-y-2">
+                      {selectedScenario.deliverables.map((deliverable, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
+                          <FileText className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{deliverable}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Key Features */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center">
+                    <Layers className="w-5 h-5 mr-2 text-yellow-400" />
+                    Key Features
+                  </h3>
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <ul className="space-y-2">
+                      {selectedScenario.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300">
+                          <Star className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://github.com/paulasilvatech/Figma-to-Code-Dev" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                >
+                  <span>Start This Module</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <button 
+                  onClick={() => setSelectedScenario(null)}
+                  className="flex items-center justify-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                >
+                  <span>Close Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Performance Metrics Section */}
       <section id="metrics" className="py-20 px-4 bg-gray-900/50">
