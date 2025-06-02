@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Clock, Users, Zap, Check, ExternalLink, Star, Book, Code, Menu, X, ShoppingBag, BarChart3, Palette, Plane, Package, Timer, FileText, Globe, Smartphone, Database, Shield, Layers } from 'lucide-react';
+import { ChevronRight, Clock, Users, Zap, Check, ExternalLink, Star, Book, Code, Menu, X, ShoppingBag, BarChart3, Palette, Plane, Package, Timer, FileText, Layers } from 'lucide-react';
 
 // Custom Figma to Code Logo
 const FigmaToCodeLogo = ({ className = "w-12 h-12" }) => {
